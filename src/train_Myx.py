@@ -30,8 +30,8 @@ def preprocess_data(dataset_path="dataset/seed/seed.jsonl", tokenizer=None):
     
     # Create Dataset object
     dataset = Dataset.from_dict({
-        'instruction': [item['instruction'] for item in data],
-        'response': [item['response'] for item in data]
+        'instruction': [item['response'] for item in data],
+        'response': [item['instruction'] for item in data]
     })
 
     def preprocess_function(examples):
@@ -84,7 +84,7 @@ class CustomTrainer(Trainer):
         return (loss, outputs) if return_outputs else loss
 
 # Fine-Tune with LoRA
-def fine_tune_lora(model, tokenizer, dataset, output_dir="models/lora-tinyllama"):
+def fine_tune_lora(model, tokenizer, dataset, output_dir):
     # LoRA configuration
     lora_config = LoraConfig(
         r=16,
@@ -101,7 +101,7 @@ def fine_tune_lora(model, tokenizer, dataset, output_dir="models/lora-tinyllama"
         output_dir=output_dir,
         per_device_train_batch_size=4,
         gradient_accumulation_steps=4,
-        num_train_epochs=3,
+        num_train_epochs=5,
         learning_rate=5e-4,
         save_strategy="epoch",
         logging_dir="./logs",
@@ -128,7 +128,7 @@ def main():
     # Paths
     base_model_path = "models/tinyllama-1.1b"
     seed_data_path = "dataset/seed/seed.jsonl"
-    fine_tuned_model_path = "models/lora-tinyllama"
+    fine_tuned_model_path = "models/tinyllama-backtranslation-model"
 
     # Load base model and tokenizer
     model, tokenizer = load_model(base_model_path)

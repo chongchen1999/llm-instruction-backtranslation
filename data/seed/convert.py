@@ -51,7 +51,7 @@ def load_tree_data(
 
 
 if __name__ == "__main__":
-    dump_num = 3000
+    dump_num = 3200
     pairs = load_tree_data("dataset/seed/2023-04-12_oasst_ready.trees.jsonl")
     print(f"#data: {len(pairs)}, #dump: {dump_num}")
     pairs.sort(
