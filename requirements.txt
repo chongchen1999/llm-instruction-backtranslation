@@ -1,0 +1,5 @@
+transformers==4.33.3  # Replace with the version you used/tested
+datasets==2.16.1     # Replace with the version you used/tested
+accelerate==0.23.0   # Replace with the version you used/tested
+torch==2.0.1+cu118   # Ensure compatibility with your CUDA version
+scipy==1.11.3        # Replace with the version you used/tested

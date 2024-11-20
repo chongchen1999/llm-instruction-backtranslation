@@ -1,4 +1,3 @@
-```markdown
 # LLM Instruction Backtranslation Assignment Report
 
 This repository contains the implementation details and results of a fine-tuning experiment using Low-Rank Adaptation (LoRA) to train a compact language model, **tinyllama-1.1b**, for instruction backtranslation tasks. The project aims to reverse-engineer instructions from responses, with a focus on optimizing resource usage.
@@ -16,7 +15,6 @@ This repository contains the implementation details and results of a fine-tuning
 ## Overview
 This project demonstrates:
 - Fine-tuning the **tinyllama-1.1b** model for instruction backtranslation.
-- Overcoming hardware limitations (NVIDIA RTX 3070, 8GB VRAM) using FP16 precision and LoRA techniques.
 - Generating high-quality instruction-response pairs using the fine-tuned model.
 
 ## Setup and Requirements
@@ -42,15 +40,20 @@ Dependencies include:
 ```
 .
 ├── data/
-│   ├── seed/                   # Seed data for training (JSONL format)
+│   └── seed/                   # Preprocesses seed data
 │   └── lima/                   # Generated instruction-response pairs
+├── dataset/
+│   ├── seed/                   # Seed data for training (JSONL format)
+│   └── lima/                   # LIMA dataset (JSONL format)
 ├── models/
 │   ├── tinyllama/              # Base model
 │   └── tinyllama-backtranslation-model-Myx/  # Fine-tuned model
-├── scripts/
-│   ├── preprocess.py           # Preprocesses datasets
-│   ├── train.py                # Training pipeline
-│   ├── generate.py             # Instruction generation
+├── src/
+│   ├── backtranslation_model_test.py    # Backtranslation model test
+│   ├── base_model_test.py
+│   ├── filter.py                # Filtering script
+│   ├── train_Myx.py                # Training pipeline
+│   ├── instruction_generator.py    # Instruction generation
 │   └── evaluate.py             # Evaluation scripts
 ├── README.md                   # Project description
 └── requirements.txt            # Dependency list
@@ -61,14 +64,15 @@ Dependencies include:
 1. **Seed Dataset**: The **OASST1** dataset was used for training. Download it from [here](https://huggingface.co/datasets/OpenAssistant/oasst1).
 2. **Preprocessing**: Convert dataset entries into `(response, instruction)` pairs and save in JSONL format.
    ```bash
-   python scripts/preprocess.py --input data/seed/seed.jsonl --output data/preprocessed_seed.jsonl
+   sh data/seed/download.sh
+   python data/seed/convert.py
    ```
 
 ## Training Pipeline
 
 1. Load the base model and preprocess the data:
    ```bash
-   python scripts/train.py --model_path models/tinyllama/ --data_path data/preprocessed_seed.jsonl
+   python src/train_Myx.py
    ```
 
 2. Training parameters:
@@ -84,14 +88,14 @@ Dependencies include:
 ## Instruction Generation
 
 Generate instructions for filtered responses from the **LIMA** dataset:
-1. Filter dataset for single-turn conversations:
-   ```bash
-   python scripts/preprocess.py --input data/lima/raw.jsonl --filter_single_turn
-   ```
 
-2. Use the fine-tuned model to generate instructions:
+1. Use the fine-tuned model to generate instructions:
    ```bash
-   python scripts/generate.py --model_path models/tinyllama-backtranslation-model-Myx/ --input data/lima/single_turn.jsonl --output data/lima/lima_instructions.json
+   python src/instruction_generator.py
+   ```
+2. Filter dataset for single-turn conversations:
+   ```bash
+   python src/filter.py
    ```
 
 ## Results and Analysis
@@ -116,4 +120,7 @@ For detailed results, see `data/lima/lima_instructions.json`.
 - **Dataset**: [OASST1](https://huggingface.co/datasets/OpenAssistant/oasst1)
 - **Base Model**: [TinyLLaMA-1.1b](https://huggingface.co/Tourist99/tinyllama)
 - **Paper**: ["Self Alignment with Instruction Backtranslation"](https://arxiv.org/pdf/2308.06259.pdf)
-```
+
+## Huggingface Link
+- **Base Model**: https://huggingface.co/Tourist99/tinyllama
+- **Fine-tuned Model**: https://huggingface.co/Tourist99/tinyllama-backtranslation-model-Myx
