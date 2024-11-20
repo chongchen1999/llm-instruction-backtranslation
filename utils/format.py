@@ -1,7 +1,7 @@
 import json
 
 # Input and output file paths
-input_file = "lima_instructions.json"  # Replace with your JSON file name
+input_file = "non_multi_turn_examples.json"  # Replace with your JSON file name
 output_file = "output.txt"
 
 # Load JSON data

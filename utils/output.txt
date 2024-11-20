@@ -1,0 +1,1386 @@
+Entry 1
+========================================
+Original Instruction:
+Can brain cells move? By movement I mean long distance migration (preferably within the brain only).
+
+Generated Instruction:
+It is possible that the brain cells migrate, but the exact mechanism is not known.
+
+Response: Is the brain cells migrating or not?
+
+Response:
+The question is relatively broad and one should take into account that the brain not only consists of neurons, but also glial cells (supportive cells) and pre-mitotic neuronal stem cells. Furthermore, as critical fellow-scientists have indicated, developmental stage is very important, as the developing embryonic brain is very different from the adult brain.
+However, after sifting through various publications, the answer to the question is actually remarkably simple: Yes, brain cells migrate.
+In  the adult brain glial cells migrate in the brain (Klämbt, 2009). Glial cells are involved in a myriad of functions, but a notable example of migrating glial cells are the oligodendrocytes that migrate relative long distances to find their target axons onto which they wrap themselves to form the insulating myelin sheath (Tsai and Miller, 2002).
+Neuronal stem cells migrate over long distances in response to injury (Imitola et al., 2004) and they migrate from specific stem-cell locations (e.g., hippocampus and subventricular zone) to other regions (Clarke, 2003).
+Post-mitotic, but non-differentiated neurons have been shown to migrate in the adult brain in fish (Scott et al., 2012), and in mammals and non-human primates as well (Sawada et al., 2011).
+Not surprisingly, glial cells, stem cells and neurons also migrate during embryonic development. Most notably, post-mitotic neurons destined to fulfill peripheral functions have to migrate over relatively long distances from the neural crest to their target locations (Neuroscience, 2nd ed, Neuronal Migration).
+
+========================================
+
+Entry 2
+========================================
+Original Instruction:
+In our computer systems lecture we were introduced to the MIPS processor. It was (re)developed over the course of the term and has in fact been quite easy to understand. It uses a RISC design, that is its elementary commands are regularly encoded and there are only few of them in order to keep the wires simple.
+It was mentioned that CISC follows a different philosophy. I looked briefly at the x86 instruction set and was shocked. I can not image how anyone would want to build a processor that uses so complex a command set!
+So I figure there have to be good arguments why large portions of the processor market use CISC architectures. What are they? 
+
+Generated Instruction:
+What is the historical trend in CPUs and processors?
+
+Response: What is the historical trend in CPUs and processors?
+
+
+A: The historical trend in CPUs and processors is a general one. There is a general historical trend towards smaller programs. There is also a general historical trend towards more complex programs.
+
+Response: What is the historical trend in CPUs and processors?
+
+
+A: The historical trend in CPUs and processors is a general one. There is a general historical trend towards smaller programs and more complex programs.
+
+
+A: The historical trend in CPUs and processors is a general one. There is a general historical trend towards smaller programs and more complex programs.
+
+
+Response: What is the historical trend in CPUs and processors?
+
+
+A: The historical trend in CPUs and processors is a general one. There is a general historical trend towards smaller programs and more complex programs.
+
+
+: Did you mean the historical trend in CPUs and processors?
+
+
+A: The historical trend in CPUs and processors is a general one. There is a general historical trend towards smaller programs and more complex programs.
+
+
+Response: What is the historical tr
+
+Response:
+There is a general historical trend.
+In the olden days, memories were small, and so programs were perforce small. Also, compilers were not very smart, and many programs were written in assembler, so it was considered a good thing to be able to write a program using few instructions. Instruction pipelines were simple, and processors grabbed one instruction at a time to execute it. The machinery inside the processor was quite complex anyway; decoding instructions was not felt to be much of a burden. 
+In the 1970s, CPU and compiler designers realized that having such complex instructions was not so helpful after all. It was difficult to design processors in which those instructions were really efficient, and it was difficult to design compilers that really took advantage of these instructions. Chip area and compiler complexity was better spent on more generic pursuits such as more general-purpose registers. The Wikipedia article on RISC explains this in more detail.
+MIPS is the ultimate RISC architecture, which is why it's taught so often.
+The x86 family is a bit different. It was originally a CISC architecture meant for systems with very small memory (no room for large instructions), and has undergone many successive versions. Today's x86 instruction set is not only complicated because it's CISC, but because it's really a 8088 with a 80386 with a Pentium possibly with an x86_64 processor.
+In today's world, RISC and CISC are no longer the black-and-white distinction they might have been once. Most CPU architectures have evolved to different shades of grey.
+On the RISC side, some modern MIPS variants have added multiplication and division instructions, with a non-uniform encoding. ARM processors have become more complex: many of them have a 16-bit instruction set called Thumb in addition to the “original” 32-bit instructions, not to mention Jazelle to execute JVM instructions on the CPU. Modern ARM processors also have SIMD instructions for multimedia applications: some complex instructions do pay after all.
+On the CISC side, all recent processors are to some extent RISC inside. They have microcode to define all these complex macro instructions. The sheer complexity of the processor makes the design of each model take several years, even with a RISC design, what with the large number of components, with pipelining and predictive execution and whatnot.
+So why do the fastest processors remain CISC outside? Part of it, in the case of the x86 (32-bit and 64-bit) family, is historical compatibility. But that's not the whole of it. In the early 2000s, Intel tried pushing the Itanium architecture. Itanium is an extreme case of complex instructions (not really CISC, though: its design has been dubbed EPIC). It even does away with the old-fashioned idea of executing instructions in sequence: all instructions are executed in parallel until the next barrier. One of the reasons Itanium didn't take is that nobody, whether at Intel or elsewhere, could write a decent compiler for it. Now a good old mostly-sequential processor like x86_64, that's something we understand.
+
+========================================
+
+Entry 3
+========================================
+Original Instruction:
+View tabular file such as CSV from command line, having horizontal and vertical scrolling would be great.
+
+Generated Instruction:
+You need to install csvkit first. 
+
+Then, you can import csvkit into your python program. 
+
+Here is an example:
+```python
+import csv
+
+# csvkit example
+# import csv
+# 
+# with open('city_population.csv', newline='') as f:
+#     reader = csv.DictReader(f)
+#     for row in reader:
+#         print(row['iso3_country'], row['iso3_city'], row['population'])
+# ```
+
+Response: How about using csvkit?
+
+Response: Using csvkit.
+
+Response: Please provide a link to the example code.
+
+Response: Using csvkit.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link to the example code.
+
+Response: Please provide a link
+
+Response:
+Sure, please take a look at csvkit. It provides a set of tools that adhere to the UNIX philosophy (meaning they are small, simple, single-purposed and can be combined). 
+
+Here is an example that extracts the ten most populated cities in Germany from the free Maxmind World Cities database and displays the result in a console-readable format:
+```$ csvgrep -e iso-8859-1 -c 1 -m "de" worldcitiespop | csvgrep -c 5 -r "\d+"
+  | csvsort -r -c 5 -l | csvcut -c 1,2,4,6 | head -n 11 | csvlook
+-----------------------------------------------------
+|  line_number | Country | AccentCity | Population  |
+-----------------------------------------------------
+|  1           | de      | Berlin     | 3398362     |
+|  2           | de      | Hamburg    | 1733846     |
+|  3           | de      | Munich     | 1246133     |
+|  4           | de      | Cologne    | 968823      |
+|  5           | de      | Frankfurt  | 648034      |
+|  6           | de      | Dortmund   | 594255      |
+|  7           | de      | Stuttgart  | 591688      |
+|  8           | de      | Düsseldorf | 577139      |
+|  9           | de      | Essen      | 576914      |
+|  10          | de      | Bremen     | 546429      |
+-----------------------------------------------------
+```
+
+Csvkit is platform independent because it is written in Python. 
+
+========================================
+
+Entry 4
+========================================
+Original Instruction:
+Slater type orbitals (STO) are considered to be more accurate than gaussian type orbitals (GTO) for atomic and molecular QM calculations because - among other reasons - they decay with $e^{-\alpha r}$ as $r \to \infty$. But GTOs are more popular because they are easier to calculate with. GTOs decay with $e^{-\alpha r^2}$, so its adequate to sometimes add diffuse functions to the GTO basis set to compensate for gaussian decay behaviour.
+Also, exact hydrogen wavefunctions decay exponentially, so the motivation for STOs.
+I understand that the only boundary requirement for solving the Schrödinger equation for atoms and molecules in free space is that the wavefunction goes zero as $r \to \infty$, but there are no a priori requirements for the way it decays as it does so.
+My question is: do we have theoretical (ab initio) and/or experimental reasons to believe that all atomic and molecular wavefunctions decay like $e^{-\alpha r}$ as $r \to \infty$.
+
+Generated Instruction:
+I will give a formal response to this question. Let's define the Schrödinger equation as follows:
+
+$$
+\psi(\mathbf{r}) = \frac{1}{\sqrt{2\pi\epsilon_0}}\int_{-\infty}^{\infty}\frac{e^{i\mathbf{k}\cdot\mathbf{r}}}{\sqrt{2k^2+\epsilon_0}}d\mathbf{k}
+$$
+where $\mathbf{r}$ is a vector in space, and $\epsilon_0$ is a constant that represents the vacuum electric field. Now let's define the Kohn-Sham equation as follows:
+
+$$
+\psi(\mathbf{r}) = \frac{1}{\sqrt{2\pi\epsilon_0}}\int_{-\infty}^{\infty}\frac{e^{i\mathbf{k}\cdot\mathbf{r}}}{\sqrt{2k^2+\epsilon_0}}d\mathbf{k} + \psi_0(\mathbf{r})
+$$
+where $\
+
+Response:
+I'll answer this question from the theoretical side. The exponential behavior follows simply from the Schrödinger equation. Consider the one-electron Schrödinger equation:
+$$
+(-\frac{1}{2}\nabla^2 + V(\mathbf{r}))\psi(\mathbf{r}) = \epsilon\psi(\mathbf{r}), \epsilon < 0
+$$
+At spatial points that are very far away from the nucleus, $V(\mathbf{r})\approx 0$, so that the asymptotic solution is given by
+$$
+-\frac{1}{2}\nabla^2\psi(\mathbf{r}) = \epsilon\psi(\mathbf{r}), \epsilon < 0
+$$
+This differential equation has basic solutions of the form
+$$
+\psi(\mathbf{r}) = Ce^{-\sqrt{-2\epsilon}\mathbf{k}\cdot\mathbf{r}}
+$$
+for some unit vector $\mathbf{k}$. The real asymptotic behavior of $\psi(\mathbf{r})$ is thus a linear combination of these basic solutions. The linear combination may bring a polynomial prefactor to the exponential, but will never alter the exponent. Thus we have not only proved the exponential behavior, but also derived the correct exponent $\alpha = \sqrt{-2\epsilon}$. For a multi-electronic, non-interacting system, the overall decay rate is governed by the slowest decaying orbital, i.e. the HOMO.
+Of course, the real wavefunction can only be described by a multi-electron Schrödinger equation. But we can work on the equivalent Kohn-Sham system and show that the Kohn-Sham wavefunction decays at a rate given by the Kohn-Sham HOMO energy. By Janak's theorem, the Kohn-Sham HOMO energy is just the negative of the ionization potential of the exact system. To see this, consider a huge ensemble of $N$ identical, non-interacting molecules. If we remove one electron from the ensemble and let the hole delocalize evenly between all the molecules, then as $N\to +\infty$, the electron removal has a negligible impact on the electron density of any molecule (and therefore the Kohn-Sham potential of each molecule). Therefore under the Kohn-Sham framework we see that removing such an electron costs an energy of $-\epsilon_{\mathrm{HOMO}}$ (it does not matter whether the HOMO refers to that of the ensemble or that of a molecule, since their orbital energies are equal), since the electron is taken from an energy level whose energy is $\epsilon_{\mathrm{HOMO}}$ and the Hamiltonian is not changed in this process. On the other hand, from the perspective of the real system it is clear that the energy cost is equal to the first ionization energy of one of the molecules, $I$. Therefore we have $\epsilon_{\mathrm{HOMO}} = -I$, which means that the Kohn-Sham wavefunction decays like (again up to a possible polynomial prefactor; the precise determination of this polynomial prefactor is a much more difficult question)
+$$
+\psi(\mathbf{r}) = Ce^{-\sqrt{2I}\mathbf{k}\cdot\mathbf{r}}
+$$
+Although the Kohn-Sham wavefunction is fictional, its density is equal to the true multielectronic density, and in order for the true density to have the same asymptotic behavior as the Kohn-Sham density, the true wavefunction must have the same asymptotic behavior as the Kohn-Sham wavefunction. Q.E.D.
+
+========================================
+
+Entry 5
+========================================
+Original Instruction:
+Explain what "git reset" does. I come from a SVN background and Git is a whole new paradigm. I got mercurial easily, but Git is much more technical.
+I think ```git reset``` is close to ```hg revert```, but it seems there are differences. Please include detailed explanations about:
+
+* the options ```--hard```, ```--soft``` and ```--merge```;
+* the strange notation you use with ```HEAD``` such as ```HEAD^``` and ```HEAD~1```;
+* concrete use cases and work flows;
+* consequences on the working copy, the ```HEAD``` and your global stress level.
+
+Generated Instruction:
+* Increase the danger level by one at a time.
+* Start by explaining each danger level and its purpose.
+* Then, provide concrete use cases and workflows.
+
+Response: Can you explain the danger level of each and provide concrete use cases and workflows for each?
+
+Please include detailed explanations about:
+
+```--hard``` moves ```HEAD``` and resets the staging area and the working tree.
+
+```--soft``` moves ```HEAD```, resets the staging area, and tries to move all the changes in your working tree into the new working tree.
+
+```--mixed``` moves ```HEAD```, resets the staging area and the working tree.
+
+```--merge``` moves ```HEAD```, resets the staging area and the working tree.
+
+```--hard``` moves ```HEAD```, resets the staging area and tries to move all the changes in your working tree into the new working tree.
+
+
+>  please include more detailed explanations about each danger level
+
+>  concrete use cases and workflows;
+
+
+* Use ```--soft``` when you want to move to another commit and patch things up without "losing your place". It's pretty rare that you need this.
+
+```
+# git reset --soft example
+touch foo                            // Add a file, make some changes.
+git add foo                          //
+git commit -m "bad commit message"   // Commit... D'oh, that was a mistake!
+git reset --soft HEAD^               // Go back one commit and fix things.
+git commit -m "good commit"          // There, now it's right.
+```
+
+--
+
+* Use ```--mixed``` (which is the default) when you want to see what things look like at another commit, but you don't want to lose any changes you already have.
+* Use ```--merge``` when you want to move to a new spot but incorporate the changes you already have into that the working tree.
+* Use ```--hard``` to wipe everything out and start a fresh slate at the new commit.
+
+Instruction:
+
+* Increase the danger level by one at a time.
+* Start by explaining each danger level and its purpose.
+* Then, provide concrete use cases and workflows for each.
+
+Response: Can you explain the danger level of each and provide concrete use cases and workflows for each?
+
+Please include detailed explanations about:
+
+```--hard``` moves ```HEAD```
+
+Response:
+Remember that in ```git``` you have:
+
+* the ```HEAD``` pointer, which tells you what commit you're working on
+* the working tree, which represents the state of the files on your system
+* the staging area (also called the index), which "stages" changes so that they can later be committed together
+
+
+>  Please include detailed explanations about:
+  ```--hard```, ```--soft``` and ```--merge```;
+
+In increasing order of dangerous-ness:
+
+* ```--soft``` moves ```HEAD``` but doesn't touch the staging area or the working tree.
+* ```--mixed``` moves ```HEAD``` and updates the staging area, but not the working tree.
+* ```--merge``` moves ```HEAD```, resets the staging area, and tries to move all the changes in your working tree into the new working tree.
+* ```--hard``` moves ```HEAD``` and adjusts your staging area and working tree to the new ```HEAD```, throwing away everything.
+
+
+>  concrete use cases and workflows;
+
+
+* Use ```--soft``` when you want to move to another commit and patch things up without "losing your place". It's pretty rare that you need this.
+
+```
+# git reset --soft example
+touch foo                            // Add a file, make some changes.
+git add foo                          //
+git commit -m "bad commit message"   // Commit... D'oh, that was a mistake!
+git reset --soft HEAD^               // Go back one commit and fix things.
+git commit -m "good commit"          // There, now it's right.
+```
+--
+
+* Use ```--mixed``` (which is the default) when you want to see what things look like at another commit, but you don't want to lose any changes you already have.
+* Use ```--merge``` when you want to move to a new spot but incorporate the changes you already have into that the working tree.
+* Use ```--hard``` to wipe everything out and start a fresh slate at the new commit.
+
+========================================
+
+Entry 6
+========================================
+Original Instruction:
+I am looking to use Java to get the MD5 checksum of a file.
+How is it done?
+
+Generated Instruction:
+The com.google.common.hash API provides:
+
+* A unified user-friendly API for all hash functions
+* Seedable 32- and 128-bit implementations of murmur3
+* md5(), sha1(), sha256(), sha512() adapters, change only one line of code to switch between these, and murmur.
+* goodFastHash(int bits), for when you don't care what algorithm you use
+* General utilities for HashCode instances, like combineOrdered / combineUnordered
+
+* Files.hash() computes and returns the digest value for a file.
+* For example a sha-1 digest calculation (change SHA-1 to MD5 to get MD5 digest)
+* "SHA-1: " + Files.asByteSource(file).hash(Hashing.sha1());
+
+Response: What part of Files.hash does not cover?
+
+Note that crc32 has a higher collision rate than the others.
+
+What part of Files.hash as stated above does not cover?
+
+
+A: The com.google.common.hash API provides:
+
+* A unified user-friendly API for all hash functions
+* Seedable 32- and 128-bit implementations of murmur3
+* md5(), sha1(), sha256(), sha512() adapters, change only one line of code to switch between these, and murmur.
+* goodFastHash(int bits), for when you don't care what algorithm you use
+* General utilities for HashCode instances, like combineOrdered / combineUnordered
+
+* Files.hash() computes and returns the digest value for a file.
+* For example a sha-1 digest calculation (change SHA-1 to MD5 to get MD5 digest)
+* "SHA-1: " + Files.asByteSource(file).hash(Hashing.sha1());
+
+
+
+A: The com.google.common.hash API provides:
+
+* A unified user-friendly API for all hash functions
+* Seedable 32- and 128-bit implementations of murmur3
+* md5(), sha1(), sha256(), sha512() adapters, change only one line of code to switch between these, and murmur.
+* goodFastHash(int bits), for when you don't care what algorithm you use
+* General utilities for HashCode instances, like combineOrdered / combineUnordered
+
+* Files.hash() computes and returns the digest value for a file.
+* For example a sha-1 digest calculation (change SHA-1
+
+Response:
+The com.google.common.hash API offers:
+
+* A unified user-friendly API for all hash functions
+* Seedable 32- and 128-bit implementations of murmur3
+* md5(), sha1(), sha256(), sha512() adapters, change only one line of code to switch between these, and murmur.
+* goodFastHash(int bits), for when you don't care what algorithm you use
+* General utilities for HashCode instances, like combineOrdered / combineUnordered
+
+Read the User Guide (IO Explained, Hashing Explained). 
+For your use-case ```Files.hash()``` computes and returns the digest value for a file.
+For example a sha-1 digest calculation (change SHA-1 to MD5 to get MD5 digest)
+```HashCode hc = Files.asByteSource(file).hash(Hashing.sha1());
+"SHA-1: " + hc.toString();
+```
+Note that crc32 is much faster than md5, so use crc32 if you do not need a cryptographically secure checksum. Note also that md5 should not be used to store passwords and the like since it is to easy to brute force, for passwords use bcrypt,  scrypt or sha-256 instead. 
+For long term protection with hashes a  Merkle signature scheme adds to the security and The Post Quantum Cryptography Study Group sponsored by the European Commission has recommended use of this cryptography for long term protection against quantum computers (ref).
+Note that crc32 has a higher collision rate than the others. 
+What part of Files.hash as stated above does not cover Files.hash ?
+
+========================================
+
+Entry 7
+========================================
+Original Instruction:
+What are the primary objections Democrats have to a border wall?
+
+Generated Instruction:
+To provide a response to the given material, try to answer the following questions:
+
+- What are Democrats opposed to?
+- What are Democrats opposed to in relation to border-wall construction?
+- What are the recent reports of spending bills including funding for a border wall?
+- What are the concerns about the proposed new border wall?
+- What are the concerns about the Administration not having a plan to build the border wall?
+- What are the objections from Democratic and Republican members of Congress that represent border states?
+- What are the concerns about the construction of a wall from private landowners and Native American tribes?
+- What are the concerns about the construction of a wall from the Democratic and Republican members of Congress that represent border states?
+
+Response: How do Democrats oppose border wall construction? What are the recent reports of spending bills including funding for a border wall? What are the concerns about the proposed new border wall? What are the concerns about the Administration not having a plan to build the border wall? What are the objections from Democratic and Republican members of Congress that represent border states? What are the concerns about the construction of a wall from private landowners and Native American tribes? What are the concerns about the construction of a wall from the Democratic and Republican members of Congress that represent border states?
+
+Describe the reported concerns of the spending bills.
+
+What are the concerns about the construction of a wall from private landowners and Native American tribes? What are the concerns about the construction of a wall from the Democratic and Republican members of Congress that represent border states?
+
+
+
+I hope this helps!
+
+
+A:
+
+Response:
+It's not clear to me that Democrats are opposed to border-wall construction (your one source suggests they are fine with border walls/fences where necessary), so much as they opposed to some of the plans for full-border walls that have been put forth so far.
+Recently, in response to reports that the spending bill would include funding for a border wall, 5 Democratic senators released a letter voicing concerns over the cost, the effectiveness, and the legal issues of constructing it.
+
+We are also concerned with reports that there may be an effort to include funding for a very expensive new wall along the southern border with Mexico and a “deportation force.”  According to non-partisan experts, the proposed new border wall could cost as much as $25 million per mile and raises considerable issues that have not been resolved by the Congress or the Department of Homeland Security.  First, many experts believe that such a border wall will not work.  Second, there is real concern that the Administration, put simply, has no plan to build the border wall.  For example, the Administration has not detailed how to 1) use eminent domain and other procedures to acquire land from private landowners and Native American tribes, 2) design the wall, 3) locate the wall, 4) construct the wall, and 5) require Mexico to pay for the wall given the President’s clear and repeated promises that he would force Mexico to do so. Finally, there are objections to the construction of a wall from Democratic and Republican members of Congress that represent border states.  Given these and other concerns, we believe it would be inappropriate to insist on the inclusion of such funding in a must-pass appropriations bill that is needed for the Republican majority in control of the Congress to avert a government shutdown so early in President Trump’s Administration.
+[...]
+Senator Charles Schumer
+Senator Richard Durbin
+Senator Patty Murray
+Senator Debbie Stabenow
+Senator Patrick Leahy
+
+Based on this letter, it appears their main objections to a full border wall are currently the cost-benefit ratio and the legal issues of taking land from Americans to build it on; objections that may not be unique to Democrats.
+
+========================================
+
+Entry 8
+========================================
+Original Instruction:
+I'm converting a video to GIF file with ```ffmpeg```:
+```ffmpeg \
+  -i input.flv \
+  -ss 00:00:00.000 \
+  -pix_fmt rgb24 \
+  -r 10 \
+  -s 320x240 \
+  -t 00:00:10.000 \
+  output.gif
+```
+It works great, but output gif file has a very low quality.
+Any ideas how can I improve quality of converted gif?
+
+Generated Instruction:
+1. Download ffmpeg and ImageMagick from the respective websites.
+2. Download the .flv file from the web.
+3. Convert the .flv to a .png file using ffmpeg with the -i option.
+4. Convert the .png file to a .gif file using ImageMagick with the -f option.
+5. Combine the .png and .gif files into a .gif file with the pipe operator (|).
+6. Combine the .png and .gif files into a .gif file with the pipe operator (|).
+7. Combine the .png, .gif, and .png files into a .gif file with the pipe operator (|).
+
+Response: Thank you! Could you please explain the process in a few sentences?
+
+I'd like to know if I can avoid intermediate image files.
+
+Thank you!
+
+
+A: The following commands will convert the flv file to a png file using ffmpeg and ImageMagick, then combine the output with the gif file using a pipe and save the resulting image as a .gif file:
+
+ffmpeg -i input.flv -vf scale=320:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 10 -loop 0 - output.gif
+
+ImageMagick -f output.png -gif - -output output.gif
+
+Response: Could you explain the process in a few sentences?
+
+I'd like to know if I can avoid intermediate image files.
+
+Thank you!
+
+
+A:
+
+Response:
+If you would prefer to avoid intermediate image files, the commands provided by LordNeckBeard can be piped between ```ffmpeg``` and ImageMagick's ```convert``` so that no intermediate files are required:
+```ffmpeg -i input.flv -vf scale=320:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 10 -loop 0 - output.gif
+```
+The ```-f image2pipe``` tells ffmpeg to split the video into images and make it suitable to be piped out, and ```-vcodec ppm``` specifies the output format to be ppm (for some reason if the format is png, either ```convert``` does not read all the images from the pipe, or ffmpeg does not output them all). The ```-``` for both commands specifies that a pipe will be used for output and input respectively.
+To optimize the result without saving a file, you can pipe the output from ```convert``` to a second ```convert``` command:
+```ffmpeg -i input.flv -vf scale=320:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 10 -loop 0 - gif:- | convert -layers Optimize - output.gif
+```
+The ```gif:-``` tells ```convert``` to pipe its output as gif formatted data and ```-layers Optimize``` tells the second ```convert``` to perform ```optimize-frame``` and ```optimize-transparancy``` methods (see the ImageMagick Introduction to Animation Optimization). Note that the output from the ```-layers Optimize``` may not always provide a smaller file size, so you may want to try converting to a gif without optimization first to be sure.
+Remember that during this whole process everything is in memory so you may need sufficient memory if the images are quite large.
+
+========================================
+
+Entry 9
+========================================
+Original Instruction:
+Tor can only handle TCP connections, but DNS is a UDP protocol. How does Tor route DNS requests over its TCP based network? Why can the same approach not be used to route all UDP traffic over Tor?
+
+Generated Instruction:
+Tor clients do not directly do DNS requests. When you open a connection through the tor network you typically ask your tor client to connect you to a hostname and port, say www.example.com:80. Your tor client, once it has created a circuit, will send that hostname and port to the exit node in its RELAY_BEGIN cell. The exit node will then do a DNS resolve and open a TCP connection to the target. Once that's established it will tell your tor client that the connection is open, and for informational purposes will also tell your tor client what address that hostname resolved to. Tor, in addition to that, has some sort of "remote DNS resolve" protocol built in. This support allows clients to query for certain resource types, like IPv4 or IPv6 addresses. Here too, the exit node does the actual DNS packet sending and receiving and just relays the answer to the client.
+No UDP packets are actually ever routed from the client.
+
+Response: How does the Tor client do the DNS requests?
+
+
+A: The Tor client does not do DNS requests. The Tor client does not know anything about DNS, and it does not do DNS resolution itself. The Tor client simply requests the hostname and port of a connection, and then uses a DNS lookup to connect to the target.
+The tor client uses a socks5 tunnel to connect to the exit node, and then sends the hostname and port to the exit node in a RELAY_BEGIN cell. The exit node then does a DNS resolve and opens a TCP connection to the target.
+The exit node does the actual DNS packet sending and receiving and just relays the answer to the client.
+No UDP packets are actually ever routed from the client.
+
+
+A: The Tor client does not do DNS requests. It just opens a connection to a server through the Tor network and uses a DNS lookup to connect to the target.
+
+Response: How does the Tor client do the DNS requests?
+
+
+A: The Tor client does not do DNS requests. The Tor client simply requests the hostname and port of a connection, and then uses a DNS lookup to connect to the target.
+
+
+A: The Tor client does not do DNS requests. The Tor client simply requests the hostname and port of a connection, and then uses a DNS lookup to connect to the target.
+
+
+A: The Tor client does not do DNS requests. It simply requests the hostname and port of a connection, and then uses a DNS lookup to connect to the target.
+
+
+A: The Tor client does not do DNS requests. It just opens a connection to a server through the Tor network and uses a DNS lookup to connect to the target.
+
+
+A: The Tor client does not do DNS requests. It just opens a connection to a server through the Tor network and uses a DNS lookup to connect to the target.
+
+
+A: The Tor client does not do DNS requests. It simply requests the hostname and port of a connection, and then uses a DNS lookup to connect to the target.
+
+
+A: The Tor client does not do DNS requests. It simply requests the hostname and port of a connection, and then uses a DNS lookup to connect to the target.
+
+
+A: The Tor client does not do DNS requests. It just
+
+Response:
+Tor clients do not, in general, directly do DNS requests.  When you open a connection through the tor network you usually ask your client (on its socks ports) to connect you to a hostname and port, say www.example.com:80.
+Your tor client, once it has created a circuit, will send that hostname and port to the exit node in its RELAY_BEGIN cell.
+The exit node will then do a DNS resolve and open a TCP connection to the target.  Once that's established it will tell your client that the connection is open, and for informational purposes will also tell your client what address that hostname resolved to.
+Tor, in addition to that, has some sort of "remote DNS resolve" protocol built in.  This support allows clients to query for certain resource types, like IPv4 or IPv6 addresses.  Here too, the exit node does the actual DNS packet sending and receiving and just relays the answer to the client.
+No UDP packets are actually ever routed from the client.
+There's also a proposal to add more full featured DNS support to Tor.  So far it hasn't been implemented.
+
+Tor Protocol Specification references
+
+* 6.2. Opening streams and transferring data
+* 6.4. Remote hostname lookup
+* Proposal 219 - Support for full DNS and DNSSEC resolution in Tor
+
+
+========================================
+
+Entry 10
+========================================
+Original Instruction:
+Why does this throw ```NullPointerException```
+```public static void main(String[] args) throws Exception {
+    Boolean b = true ? returnsNull() : false; // NPE on this line.
+    System.out.println(b);
+}
+public static Boolean returnsNull() {
+    return null;
+}
+```
+while this doesn't
+```public static void main(String[] args) throws Exception {
+    Boolean b = true ? null : false;
+    System.out.println(b); // null
+}
+```
+?
+The solution is by the way to replace ```false``` by ```Boolean.FALSE``` to avoid ```null``` being unboxed to ```boolean``` --which isn't possible. But that isn't the question. The question is why? Are there any references in JLS which confirms this behaviour, especially of the 2nd case?
+
+Generated Instruction:
+How does Java's conditional operator ? work?
+
+Response: Explain to me how Java's conditional operator ? works.
+
+Response:
+The difference is that the explicit type of the ```returnsNull()``` method affects the static typing of the expressions at compile time:
+```E1: `true ? returnsNull() : false` - boolean (auto-unboxing 2nd operand to boolean)
+E2: `true ? null : false` - Boolean (autoboxing of 3rd operand to Boolean)
+```
+See Java Language Specification, section 15.25 Conditional Operator ? :
+
+* For E1, the types of the 2nd and 3rd operands are ```Boolean``` and ```boolean``` respectively, so this clause applies:
+
+  If one of the second and third operands is of type boolean and the type of the other is of type Boolean, then the type of the conditional expression is boolean.
+
+Since the type of the expression is ```boolean```, the 2nd operand must be coerced to ```boolean```.  The compiler inserts auto-unboxing code to the 2nd operand (return value of ```returnsNull()```) to make it type ```boolean```.  This of course causes the NPE from the ```null``` returned at run-time.
+* For E2, types of the 2nd and 3rd operands are `````` (not ```Boolean``` as in E1!) and ```boolean``` respectively, so no specific typing clause applies (go read 'em!), so the final "otherwise" clause applies:
+
+  Otherwise, the second and third operands are of types S1 and S2 respectively. Let T1 be the type that results from applying boxing conversion to S1, and let T2 be the type that results from applying boxing conversion to S2. The type of the conditional expression is the result of applying capture conversion (§5.1.10) to lub(T1, T2) (§15.12.2.7).
+
+
+* S1 == `````` (see §4.1)
+* S2 == ```boolean```
+* T1 == box(S1) == `````` (see last item in list of boxing conversions in  §5.1.7)
+* T2 == box(S2) == `Boolean
+* lub(T1, T2) == ```Boolean```
+
+So the type of the conditional expression is ```Boolean``` and the 3rd operand must be coerced to ```Boolean```.  The compiler inserts auto-boxing code for the 3rd operand (```false```).  The 2nd operand doesn't need the auto-unboxing as in ```E1```, so no auto-unboxing NPE when ```null``` is returned.
+
+
+This question needs a similar type analysis:
+Java conditional operator ?: result type
+
+========================================
+
+Entry 11
+========================================
+Original Instruction:
+How do DOS games like DOOM benefit from a PCI graphics card?
+
+Generated Instruction:
+1. What is the advantage of DOOM running faster with PCI graphics cards?
+2. How does PCI graphics cards benefit from DOOM running faster?
+3. Does this mean that PCI graphics cards can benefit from DOOM running faster?
+
+Response: What is the advantage of DOOM running faster with PCI graphics cards?
+
+What is the advantage of running DOOM with PCI graphics cards?
+
+How does PCI graphics cards benefit from running DOOM faster?
+
+Is there a way to tell if DOOM runs faster with PCI graphics cards?
+
+Please provide a detailed explanation of the intricacies of VGA programming and its memory layout and how it is used by DOOM.
+
+The reason why PCI VGA compatible adapters go directly to the main PCI VGA compatible adapter in the system, with no change required in the operating system or programs running on it, is because there is a specific “VGA compatible” device type in PCI. Such shenanigans are impossible for other device types in PCI, which is why PCI sound cards have so much trouble providing compatibility with programs written for ISA sound cards.
+
+This is the reason why there’s a specific “VGA compatible controller” device type in PCI. Such shenanigans are impossible for other device types in PCI, which is why PCI sound cards have so
+
+Response:
+DOOM itself doesn’t do anything special to benefit from PCI graphics cards. It runs faster with PCI graphics cards (and VLB, AGP, and PCI Express cards) than with ISA graphics cards because the supporting bus is faster, so reads from and writes to video memory take less time.
+PCI goes to great lengths to preserve backwards compatibility with ISA-based VGA, providing support for “VGA compatible” adapters so that they can appear in memory at the same locations and use the same I/O ports as ISA VGA cards. So accesses to the VGA registers and to the VGA buffer (at 0xA0000) go directly to the main PCI VGA compatible adapter in the system, with no change required in the operating system or programs running on it. (This is the reason why there’s a specific “VGA compatible controller” device type in PCI. Such shenanigans are impossible for other device types in PCI, which is why PCI sound cards have so much trouble providing compatibility with programs written for ISA sound cards.)
+A faster bus and/or faster video memory immediately leads to higher performance in video-intensive programs because software doesn’t need to be careful about how it accesses video memory (except on CGA, and on all platforms with vertical blank synchronisation if it cares about tearing). So ```REP MOVSW``` or ```REP MOVSD``` with no waiting in software, once the program decides to write a frame, is perfectly fine, and will go faster and faster as the underlying hardware improves. On platforms where this can’t work in hardware (e.g. on an 8088 with a VGA card), the hardware takes care of specifics — for example on an 8088 the bus unit will split up 16-bit accesses.
+Your question is specific to DOOM but other DOS games are in a similar situation. Later games tended to rely on VBE (often using UniVBE) to access video modes beyond those provided by VGA, but they mostly didn’t use anything beyond video-mode setup and framebuffer configuration (see also Were any DOS games (or software) known to use VBE/AF?), so improved video speed came mostly from bus speed increases, faster video memory, and speed increases in the cards themselves (which was already a factor in the ISA era, compare most Trident cards to Tseng cards for example).
+For an excellent explanation of the intricacies of VGA programming and its memory layout, see Fabien Sanglard’s Game Engine Black Book series. The DOOM update loop is shown on page 185 of the DOOM book; it doesn’t use any assembly language (unlike the renderer, see pp. 290 and following), but it does have one perhaps surprising feature given the 32-bit nature of the code: VGA updates are done 16 bits at a time. Section 2.3 of the same book, pp. 59 and following, describes some of the improvements to VGA adapters around the time DOOM was released, in particular the switch to the VESA Local Bus on 486s. The benchmark table on page 287 shows the importance of the bus.
+
+========================================
+
+Entry 12
+========================================
+Original Instruction:
+I need to be able to open a document using its default application in Windows and Mac OS. Basically, I want to do the same thing that happens when you double-click on the document icon in Explorer or Finder. What is the best way to do this in Python?
+
+Generated Instruction:
+- ```os.system(filename)```
+- ```subprocess.call([filename, "--help"])```
+- ```os.system("open " + shlex.quote(filename))```
+
+Response: What are the advantages and disadvantages of using these commands in Python?
+
+* ```os.system(filename)```
+* ```subprocess.call([filename, "--help"])```
+* ```os.system("open " + shlex.quote(filename))```
+
+Response: What are the advantages and disadvantages of using these commands in Python?
+
+* ```os.system(filename)```
+* ```subprocess.call([filename, "--help"])```
+* ```os.system("open " + shlex.quote(filename))```
+
+Response: What are the advantages and disadvantages of using these commands in Python?
+
+* ```os.system(filename)```
+* ```subprocess.call([filename, "--help"])```
+* ```os.system("open " + shlex.quote(filename))```
+
+Response:
+```open``` and ```start``` are command-interpreter things for Mac OS/X and Windows respectively, to do this.
+To call them from Python, you can either use ```subprocess``` module or ```os.system()```. 
+Here are considerations on which package to use:
+
+* You can call them via ```os.system```, which works, but...
+Escaping: ```os.system``` only works with filenames that don't have any spaces or other shell metacharacters in the pathname (e.g. ```A:\abc\def\a.txt```), or else these need to be escaped. There is ```shlex.quote``` for Unix-like systems, but nothing really standard for Windows. Maybe see also python, windows : parsing command lines with shlex
+
+* MacOS/X: ```os.system("open " + shlex.quote(filename))```
+* Windows: ```os.system("start " + filename)``` where properly speaking ```filename``` should be escaped, too.
+
+* You can also call them via ```subprocess``` module, but...
+For Python 2.7 and newer, simply use
+```subprocess.check_call(['open', filename])
+```
+In Python 3.5+ you can equivalently use the slightly more complex but also somewhat more versatile
+```subprocess.run(['open', filename], check=True)
+```
+If you need to be compatible all the way back to Python 2.4, you can use ```subprocess.call()``` and implement your own error checking:
+```try:
+    retcode = subprocess.call("open " + filename, shell=True)
+    if retcode < 0:
+        print >>sys.stderr, "Child was terminated by signal", -retcode
+    else:
+        print >>sys.stderr, "Child returned", retcode
+except OSError, e:
+    print >>sys.stderr, "Execution failed:", e
+```
+Now, what are the advantages of using ```subprocess```?
+
+* Security: In theory, this is more secure, but in fact we're needing to execute a command line one way or the other; in either environment, we need the environment and services to interpret, get paths, and so forth.  In neither case are we executing arbitrary text, so it doesn't have an inherent "but you can type ```'filename ; rm -rf /'```" problem, and if the file name can be corrupted, using ```subprocess.call``` gives us little additional protection.
+* Error handling: It doesn't actually give us any more error detection, we're still depending on the ```retcode``` in either case; but the behavior to explicitly raise an exception in the case of an error will certainly help you notice if there is a failure (though in some scenarios, a traceback might not at all be more helpful than simply ignoring the error).
+* Spawns a (non-blocking) subprocess: We don't need to wait for the child process, since we're by problem statement starting a separate process.
+
+To the objection "But ```subprocess``` is preferred."  However, ```os.system()``` is not deprecated, and it's in some sense the simplest tool for this particular job. Conclusion: using ```os.system()``` is therefore also a correct answer.
+A marked disadvantage is that the Windows ```start``` command requires you to pass in ```shell=True``` which negates most of the benefits of using ```subprocess```.
+
+
+========================================
+
+Entry 13
+========================================
+Original Instruction:
+Why does PRC devalue its currency on purpose, but Turkey is worried about the devaluation of its currency?
+
+Generated Instruction:
+What is the reason for a country to devalue its currency?
+
+Response: What is the reason for a country to devalue its currency?
+
+Response:
+Trade surplus/deficit
+Devaluing one's currency means mostly one thing: It becomes more expensive to import products from abroad, while one's own products become comparably cheaper to buy on the world market. That means a country which exports lots of goods wants to devalue their currency while a country which imports lots of goods does not.
+In 2016, Turkey imported goods worth US $186 billion and exported goods worth US $156 billion. That means they had a trade deficit of 19%.
+However, China only imported goods worth US $1.23 trillion and exported goods worth US $2.27 trillion in 2016. That means they had a trade surplus of 84%.
+Which is why China wants to devalue their currency while Turkey does not.
+Debt management
+Another reason to devalue one's currency is that it reduces any debts denoted in that currency. If a country has a problem of too much public and private debt, then an easy way to get rid of it is to cause a hyperinflation. 
+China happens to have a debt-to-gdp ratio of 47.6% while Turkey only has one of 28.3%. When you look at the private debt (debt of private citizens and companies in the country), you see the same picture. Private debit in Turkey was 170% of GDP, while China's is rumored to be over 300%.
+Which is why reducing debt through causing inflation seems more attractive to China than to Turkey.
+Foreign investor relations
+So why don't all countries get rid of their debt by adding a few zeroes to their bank notes? Because inflating your currency is a surefire way to drive away any foreign investors. Nobody will invest money into your country when that money might be worth nothing in a few years. Investors want stable currencies. Again, we observe the same difference in motivation between Turkey and China here. Turkey is actively inviting foreign investors, but China is quite reluctant to allow foreign economic influence in their country.
+
+========================================
+
+Entry 14
+========================================
+Original Instruction:
+Is it worth patenting an algorithm if I don't have the money to defend against infringements?
+
+Generated Instruction:
+Please provide me with some information on the cost of patenting, the value of patents in general, and how patenting may affect my competitors and their ability to infringe on my patent. Additionally, I am interested in any other ways in which I may profit from my patent.
+
+Response: This is a great question, I want to know if I should patent my invention and how it may affect my competitors and their ability to infringe on my patent.
+
+Is there any other ways in which I may profit from my patent?
+
+Is there a chance that I may get sued and have to pay damages?
+
+If so, how much might I get?
+
+Is there a way to sell off my patent?
+
+If so, what could I get for it?
+
+Is there any way that I may be able to license my patent without having to sue?
+
+Is there a way that I may be able to get a licensing agreement without the need for litigation?
+
+Is there a way that I may be able to sell my patent off at some point?
+
+Is there a way that I may be able to disclose or use my invention publicly, and if so, how might this affect my patent?
+
+Is there a way that I may be able to get a grace period where I can disclose or use my invention publicly, without having to patent it later?
+
+I am interested in learning more about the cost of patenting, the value of patents in general, and how patenting may affect my competitors and their ability to infringe on my patent.
+
+I am interested in learning about the potential for patents to affect my ability to monetize my invention, and how I may profit from my patent.
+
+I am interested in learning about any other ways in which I may profit from my patent.
+
+I am interested in learning about any other ways in which I may profit from my patent, such as licensing or selling it off at some point.
+
+I am interested in learning about any other ways in which I may profit from my patent, such as how I may profit from the chilling effect on competition that occurs due to a lack of funding for competitors.
+
+I am interested in learning about any other ways in which I may profit from my patent, such as how I may profit from the infringement of my patent by my competitors.
+
+I am interested in learning about any other ways in which I may profit from my patent, such as how I may profit from the licensing of my patent to others.
+
+I am interested in learning about any other ways in which I may profit from my patent, such as how I may profit from the sale of my patent.
+
+I am interested in learning about any other ways in which I may profit from my patent, such as how I may profit from the sale of my patent to others.
+
+I am interested in
+
+Response:
+This is a great question, with no one right answer.
+The strength of a patent comes from the ability to enforce it. If the patent owner cannot enforce it for whatever reason (such as a lack of funding), the patent is effectively toothless.
+But your competitors will likely not know that. They may therefore be dissuaded from infringing simply by the existence of a patent and the assumption that you would sue. Such a chilling effect on competition may be valuable to you.
+In addition, if there is infringement, you may be able to get a licensing agreement without the need for litigation. This can be a very lucrative business model, and so may justify the cost of patenting.
+And if litigation seems likely, there is a nascent field of litigation funding. While your funders will take quite a great deal of the damages, you may at least get something out of the end of it.
+Finally, even if you can't sue, someone else could. You might therefore get quite some value from selling it off at some point. There are a number of tech businesses where most of their value comes from their IP portfolio.
+On the whole therefore it depends how you see yourself proceeding. If you're unsure, it may pay to err on the side of patenting: once you disclose or use your invention publicly, you're generally barred from patenting it later (but for a short grace period in some countries), whereas it's easy to abandon a patent (or application) later down the track if you wish.
+
+========================================
+
+Entry 15
+========================================
+Original Instruction:
+"I have a ```String[]``` with values like so:
+```public static final String[] VALUES = new String[] {""AB"",""BC"",""CD"",""AE""};
+```
+Given ```String s```, is there a good way of testing whether ```VALUES``` contains ```s```?" How do I determine whether an array contains a particular value in Java?
+
+Generated Instruction:
+```public static boolean containsValue(String[] arr, String targetValue) {
+    return Arrays.stream(arr).map(s -> s.equals(targetValue)).allMatch(x -> x);
+}
+```
+
+Response: Can you provide 4 different ways to check if an array contains a value?
+
+Example:
+```String testValue="test";
+String newValueNotInList="newValue";
+String[] valueArray = { "this", "is", "java" , "test" };
+Arrays.asList(valueArray).contains(testValue); // returns true
+Arrays.asList(valueArray).contains(newValueNotInList); // returns false
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<|assistant|>
+Response: Can you provide 4 different ways to check if an array contains a value?
+
+Example:
+```String testValue="test";
+String newValueNotInList="newValue";
+String[] valueArray = { "this", "is", "java" , "test" };
+Arrays.asList(valueArray).contains(testValue); // returns true
+Arrays.asList(valueArray).contains(newValueNotInList); // returns false
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<|user|>
+Could you provide 4 different ways to check if an array contains a value?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<|assistant|>
+Response: Could you provide 4 different ways to check if an array contains a value?
+
+Example:
+```String testValue="test";
+String newValueNotInList="newValue";
+String[] valueArray = { "this", "is", "java" , "test" };
+Arrays.asList(valueArray).contains(testValue); // returns true
+Arrays.asList(valueArray).contains(newValueNotInList); // returns false
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<|user|>
+Could you provide 4 different ways to check if an array contains a value?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<|assistant|>
+Response: Could you provide 4 different ways to check if an array contains a value?
+
+Example:
+```String testValue="test";
+String newValueNotInList="newValue";
+String[] valueArray = { "this", "is", "java" , "test" };
+Arrays.asList(valueArray).contains(testValue); // returns true
+Arrays.asList(valueArray).contains(newValueNotInList); // returns false
+```
+
+Response:
+Four Different Ways to Check If an Array Contains a Value:
+
+* Using ```List```:
+```public static boolean useList(String[] arr, String targetValue) {
+    return Arrays.asList(arr).contains(targetValue);
+}
+```
+* Using ```Set```:
+```public static boolean useSet(String[] arr, String targetValue) {
+    Set set = new HashSet(Arrays.asList(arr));
+    return set.contains(targetValue);
+}
+```
+* Using a simple loop:
+```public static boolean useLoop(String[] arr, String targetValue) {
+    for (String s: arr) {
+        if (s.equals(targetValue))
+            return true;
+    }
+    return false;
+}
+```
+* Using ```Arrays.binarySearch()```:
+The code below is wrong, it is listed here for completeness. ```binarySearch()``` can ONLY be used on sorted arrays. You will find the result is weird below. This is the best option when array is sorted.
+```public static boolean binarySearch(String[] arr, String targetValue) {
+    return Arrays.binarySearch(arr, targetValue) >= 0;
+}
+```
+
+Quick Example:
+```String testValue="test";
+String newValueNotInList="newValue";
+String[] valueArray = { "this", "is", "java" , "test" };
+Arrays.asList(valueArray).contains(testValue); // returns true
+Arrays.asList(valueArray).contains(newValueNotInList); // returns false
+```
+
+========================================
+
+Entry 16
+========================================
+Original Instruction:
+Does Java casting introduce overhead? Or the compiler just resolves everything and there is no cost at run time?
+Is this a general things, or there are different cases?
+
+Generated Instruction:
+How does casting in Java impact performance?
+
+Response: Explain how casting in Java impacts performance
+
+
+
+> In Java, casting is used to convert between types. This is an important concept, since casting is used in many different situations where we need to convert between types.
+
+One common type of casting is casting between reference types and primitive types. For example, we might use the following code:
+```
+int i = 10;
+String s = (String) i; // cast to String
+int j = (int) s;
+```
+This cast converts the int value 10 from the int type to the String type. The cast is safe because the type of the s variable is a String, and the cast is only performed if the type of s is also a String.
+
+Another common type of casting is casting between reference types and classes. For example, we might use the following code:
+```
+String s = "Hello";
+Object o = s;
+String t = (String) o; // cast to String
+int i = t.length();
+```
+This cast converts the String reference s from the String class to the int type. The cast is safe because the type of the o variable is Object, and the cast is only performed if the type of s is also a String.
+
+Response:
+There are 2 types of casting in Java:
+
+Implicit casting, when you cast from a type to a wider type, which is done automatically and there is no overhead:
+```String s = "Cast";
+Object o = s; // implicit casting
+```
+Explicit casting, when you go from a wider type to a more narrow one. For this case, you must explicitly use casting like that:
+```Object o = someObject;
+String s = (String) o; // explicit casting
+```
+In this second case, there is overhead in runtime, because the two types must be checked and in case that casting is not feasible, JVM must throw a ClassCastException.
+
+Taken from JavaWorld: The cost of casting
+
+> Casting is used to convert between types -- between reference types in particular, for the type of casting operation in which we're interested here.  Upcast operations (also called widening conversions in the Java Language Specification) convert a subclass reference to an ancestor class reference. This casting operation is normally automatic, since it's always safe and can be implemented directly by the compiler. Downcast operations (also called narrowing conversions in the Java Language Specification) convert an ancestor class reference to a subclass reference. This casting operation creates execution overhead, since Java requires that the cast be checked at runtime to make sure that it's valid. If the referenced object is not an instance of either the target type for the cast or a subclass of that type, the attempted cast is not permitted and must throw a java.lang.ClassCastException.
+
+
+========================================
+
+Entry 17
+========================================
+Original Instruction:
+How can I copy a string (e.g "hello") to the System Clipboard in C#, so next time I press CTRL+V I'll get "hello"?
+
+Generated Instruction:
+```C#
+using System;
+
+class Program {
+    static void Main() {
+        // Copy to clipboard
+        // Example:
+        // Console.WriteLine("Hello, clipboard");
+        // Copy the contents of a textbox
+        // TextBox txt = new TextBox();
+        // txt.Text = "Hello, clipboard";
+        // Clipboard.SetText(txt.Text);
+        // Example:
+        // Console.WriteLine("Hello, clipboard");
+        // Example:
+        // Console.WriteLine("Hello, clipboard");
+    }
+}
+```
+
+Response: There are two classes that lives in different assemblies and different namespaces.
+
+* WinForms: use following namespace declaration, make sure ```Main``` is marked with ```[STAThread]``` attribute:
+```using System.Windows.Forms;
+```
+* WPF: use following namespace declaration
+```using System.Windows;
+```
+* console: add reference to ```System.Windows.Forms```, use following namespace declaration, make sure ```Main``` is marked with ```[STAThread]``` attribute. Step-by-step guide in another answer
+```using System.Windows.Forms;
+```
+
+To copy an exact string (literal in this case):
+```Clipboard.SetText("Hello, clipboard");
+```
+To copy the contents of a textbox either use TextBox.Copy() or get text first and then set clipboard value:
+```Clipboard.SetText(txtClipboard.Text);
+```
+See here for an example.
+Or... Official MSDN documentation or Here for WPF.
+
+Remarks:
+
+* Clipboard is desktop UI concept, trying to set it in server side code like ASP.Net will only set value on the server and has no impact on what user can see in they browser. While linked answer lets one to run Clipboard access code server side with ```SetApartmentState``` it is unlikely what you want to achieve.
+* If after following information in this question code still gets an exception see &quot;Current thread must be set to single thread apartment (STA)&quot; error in copy string to clipboard
+* This question/answer covers regular .NET, for .NET Core see - .Net Core - copy to clipboard?
+
+
+Instruction:
+
+```C#
+using System;
+
+class Program {
+    static void Main() {
+        // Copy to clipboard
+        // Example:
+        // Console.WriteLine("Hello, clipboard");
+        // Copy the contents of a textbox
+        // TextBox txt = new TextBox();
+        // txt.Text = "Hello, clipboard";
+        // Clipboard.SetText(txt.Text);
+        // Example:
+        // Console.WriteLine("Hello, clipboard");
+        // Example:
+        // Console.WriteLine("Hello, clipboard");
+    }
+}
+```
+
+Response: There
+
+Response:
+There are two classes that lives in different assemblies and different namespaces.
+
+* WinForms: use following namespace declaration, make sure ```Main``` is marked with ```[STAThread]``` attribute:
+```using System.Windows.Forms;
+```
+* WPF: use following namespace declaration
+```using System.Windows;
+```
+* console: add reference to ```System.Windows.Forms```, use following namespace declaration, make sure ```Main``` is marked with ```[STAThread]``` attribute. Step-by-step guide in another answer
+```using System.Windows.Forms;
+```
+
+To copy an exact string (literal in this case):
+```Clipboard.SetText("Hello, clipboard");
+```
+To copy the contents of a textbox either use TextBox.Copy() or get text first and then set clipboard value:
+```Clipboard.SetText(txtClipboard.Text);
+```
+See here for an example.
+Or... Official MSDN documentation or Here for WPF.
+
+Remarks:
+
+* Clipboard is desktop UI concept, trying to set it in server side code like ASP.Net will only set value on the server and has no impact on what user can see in they browser. While linked answer lets one to run Clipboard access code server side with ```SetApartmentState``` it is unlikely what you want to achieve.
+* If after following information in this question code still gets an exception see &quot;Current thread must be set to single thread apartment (STA)&quot; error in copy string to clipboard
+* This question/answer covers regular .NET, for .NET Core see - .Net Core - copy to clipboard?
+
+
+========================================
+
+Entry 18
+========================================
+Original Instruction:
+I want to put a draft watermark using the below script but the problem is that the watermark don't come over the images and I want it to come over it.
+```\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{1}
+```
+
+Generated Instruction:
+
+
+Response:
+The problem is that the ```draftwatermark``` places the material in the background, so other elements (for example, figures and listings) might cover the included material; to prevent this, instead of using the ```draftwatermark``` package, you can use the ```xwatermark``` package; the starred variant of ```\newwatermark``` places the material in the foreground which seems to be what you need. A little example:
+First, with the unstarred variant (material on the background, so a figure will be placed on top of it):
+```\documentclass{article}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\newwatermark[allpages,color=red!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+\begin{document}
+\lipsum[1-2]
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=3cm]{example-image-a}
+\end{figure}
+\lipsum[1-2]
+\end{document}
+```
+
+And now, with the starred variant (material on the foreground, so it will appear on top of figures):
+```\documentclass{article}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\newwatermark*[allpages,color=red!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+\begin{document}
+\lipsum[1-2]
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=3cm]{example-image-a}
+\end{figure}
+\lipsum[1-2]
+\end{document}
+```
+
+
+========================================
+
+Entry 19
+========================================
+Original Instruction:
+Understanding the Rails Authenticity Token
+
+Generated Instruction:
+* Use CSRF: mark forms that come from your server with the CSRF token, and make sure the token is unpredictable.
+* Always include a hidden CSRF token in every form:
+
+```html
+<input type="hidden" name="authenticity_token" value="{{ csrf_token }}">
+```
+
+* Make sure CSRF tokens are valid in your server's pages:
+
+```ruby
+# In routes.rb
+post '/transfer_funds' => 'transfer_funds#transfer_funds'
+
+def transfer_funds
+  # Check CSRF token
+  if params[:authenticity_token] != @csrf_token
+    flash[:error] = "CSRF token did not match"
+    redirect_to root_path
+  end
+end
+```
+
+Response: Can you explain the CSRF?
+
+I can't see any CSRF on your site, so I have no way of testing your CSRF solution.
+
+Please include the CSRF solution in your Rails application.
+
+Response:
+What is CSRF?
+The Authenticity Token is a countermeasure to Cross-Site Request Forgery (CSRF). What is CSRF, you ask?
+It's a way that an attacker can potentially hijack sessions without even knowing session tokens. 
+Scenario:
+
+* Visit your bank's site, log in.
+* Then visit the attacker's site (e.g. sponsored ad from an untrusted organization).
+* Attacker's page includes form with same fields as the bank's "Transfer Funds" form.
+* Attacker knows your account info, and has pre-filled form fields to transfer money from your account to attacker's account.
+* Attacker's page includes Javascript that submits form to your bank.
+* When form gets submitted, browser includes your cookies for the bank site, including the session token.
+* Bank transfers money to attacker's account.
+* The form can be in an iframe that is invisible, so you never know the attack occurred. 
+* This is called Cross-Site Request Forgery (CSRF). 
+
+CSRF solution:
+
+* Server can mark forms that came from the server itself
+* Every form must contain an additional authentication token as a hidden field.
+* Token must be unpredictable (attacker can't guess it).
+* Server provides valid token in forms in its pages.
+* Server checks token when form posted, rejects forms without proper token. 
+* Example token: session identifier encrypted with server secret key.
+* Rails automatically generates such tokens: see the authenticity_token input field in every form. 
+
+
+========================================
+
+Entry 20
+========================================
+Original Instruction:
+Why is FIFA against adding instant replay to the game?
+
+Generated Instruction:
+When will the FIFA (Federation Internationale de Football Association) decide to allow instant replay?
+
+Response: Why not? The referee is the one with the authority to determine the result.
+
+What are the reasons why FIFA is hesitant to allow instant replay?
+
+What are the advantages of instant replay?
+
+What are the disadvantages?
+
+What are the fundamentals of the argument for and against instant replay?
+
+What are the arguments for and against using goal-line technology?
+
+What is the difference between Hawk-Eye and GoalControl?
+
+What is the future of FIFA's goal-line technology?
+
+
+
+
+A: To answer your first question, no, instant replay is not a solution. The referee has the authority to determine the outcome of the game, and instant replay would not change that.
+
+Response: Will FIFA decide to allow instant replay?
+
+What are the reasons why FIFA is hesitant to allow instant replay?
+
+What are the advantages of instant replay?
+
+What are the disadvantages?
+
+What are the fundamentals of the argument for and against instant replay?
+
+What are the arguments for and against using goal-line technology?
+
+What is the difference between Hawk-Eye and GoalControl?
+
+What is the future of FIFA's goal-line technology?
+
+
+
+
+A: To answer your first question, no. Instant replay would not change the referee's decision.
+
+Response: Will FIFA decide to allow instant replay?
+
+What are the reasons why FIFA is hesitant to allow instant replay?
+
+What are the advantages of instant replay?
+
+What are the disadvantages?
+
+What are the fundamentals of the argument for and against instant replay?
+
+What are the arguments for and against using goal-line technology?
+
+What is the difference between Hawk-Eye and GoalControl?
+
+What is the future of FIFA's goal-line technology?
+
+
+A: To answer your first question, no. The referee has the authority to determine the outcome of the game. Instant replay would not change that.
+
+Response: Will FIFA decide to allow instant replay?
+
+What are the reasons why FIFA is hesitant to allow instant replay?
+
+What are the advantages of instant replay?
+
+What are the disadvantages?
+
+What are the fundamentals of
+
+Response:
+There are a few fundamental considerations:
+
+* Uncertainty is a part of the game. The referee and linesmen are the arbiters of the action. Instant replay would limit their authority.
+* Football is global. Many places do not have access to the technology necessary to implement instant replay.
+* Football is a fast-paced game with few opportunities for stoppage. Instant replay would unnecessarily slow the pace.
+
+In 2008, FiFA President Sepp Blatter said:
+
+  "Let it be as it is and let's leave [football] with errors. The television companies will have the right to say [the referee] was right or wrong, but still the referee makes the decision – a man, not a machine."
+
+Blatter and others at FIFA have repeatedly argued against using instant replay. But lately, FIFA has begun to come around on the idea. At FIFA's Congress in São Paulo prior to the 2014 World Cup, Blatter proposed allowing managers 2 challenges per game, much like the NFL handles challenges today.
+Although it's not quite "instant replay," in 2012 FIFA approved two different goal-line technologies to improve referee accuracy: "Hawk-Eye" -- which uses visual triangulation to determine ball location -- and "GoalRef" -- which uses a microchip in the ball and magnetic sensors within goalposts. (Many say FIFA approved the technologies in response to Frank Lampard's snubbed "goal" against Germany in the 2010 World Cup.) In 2013, FIFA announced it would use GoalControl, a German competitor to Hawk-Eye, at the Confederations Cup, basically a rehearsal for the World Cup. After a successful run at that tournament, FIFA announced it would implement GoalControl at the 2014 World Cup. The Guardian provides a pretty helpful FAQ on the technology.
+FIFA may choose to implement further changes to approved goal-line technology and referee rules when it meets again after the World Cup.
+
+========================================
+
