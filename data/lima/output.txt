@@ -1,0 +1,678 @@
+Entry 1
+========================================
+Original Instruction:
+Can brain cells move? By movement I mean long distance migration (preferably within the brain only).
+
+Generated Instruction:
+Brain cells migrate in response to various stimuli, including injury. Oligodendrocytes migrate in response to injury, while neuronal stem cells migrate in response to injury. Post-mitotic, but non-differentiated neurons migrate in the adult brain in fish, and in mammals and non-human primates as well.
+
+Response: Can you give me a brief overview of the migration of brain cells in response to various stimuli?
+
+
+
+Thank you very much for your help!
+
+Response:
+The question is relatively broad and one should take into account that the brain not only consists of neurons, but also glial cells (supportive cells) and pre-mitotic neuronal stem cells. Furthermore, as critical fellow-scientists have indicated, developmental stage is very important, as the developing embryonic brain is very different from the adult brain.
+However, after sifting through various publications, the answer to the question is actually remarkably simple: Yes, brain cells migrate.
+In  the adult brain glial cells migrate in the brain (Klämbt, 2009). Glial cells are involved in a myriad of functions, but a notable example of migrating glial cells are the oligodendrocytes that migrate relative long distances to find their target axons onto which they wrap themselves to form the insulating myelin sheath (Tsai and Miller, 2002).
+Neuronal stem cells migrate over long distances in response to injury (Imitola et al., 2004) and they migrate from specific stem-cell locations (e.g., hippocampus and subventricular zone) to other regions (Clarke, 2003).
+Post-mitotic, but non-differentiated neurons have been shown to migrate in the adult brain in fish (Scott et al., 2012), and in mammals and non-human primates as well (Sawada et al., 2011).
+Not surprisingly, glial cells, stem cells and neurons also migrate during embryonic development. Most notably, post-mitotic neurons destined to fulfill peripheral functions have to migrate over relatively long distances from the neural crest to their target locations (Neuroscience, 2nd ed, Neuronal Migration).
+
+========================================
+
+Entry 2
+========================================
+Original Instruction:
+In our computer systems lecture we were introduced to the MIPS processor. It was (re)developed over the course of the term and has in fact been quite easy to understand. It uses a RISC design, that is its elementary commands are regularly encoded and there are only few of them in order to keep the wires simple.
+It was mentioned that CISC follows a different philosophy. I looked briefly at the x86 instruction set and was shocked. I can not image how anyone would want to build a processor that uses so complex a command set!
+So I figure there have to be good arguments why large portions of the processor market use CISC architectures. What are they? 
+
+Generated Instruction:
+What is the difference between RISC and CISC architectures, and why are fastest processors usually CISC inside?
+
+Response: What is the difference between RISC and CISC architectures? Why are fastest processors usually CISC inside?
+
+
+A: 
+Response: What is the difference between RISC and CISC architectures?
+
+Answer: The difference between RISC and CISC architectures is that RISC is a general-purpose architecture, meaning that it is a mix of small instructions, pipelined execution, and multiplexing, while CISC is a specific architecture, meaning that it is a mix of large instructions, pipelined execution, and multiplexing, and the instructions are more complex. RISC is more general than CISC, and CISC is more specific.
+
+RISC is a CISC architecture because it was designed to be a general-purpose architecture, and it is still a general-purpose architecture today. CISC is a specific architecture because it is designed to be a specific architecture, and it is still a specific architecture today.
+
+The most popular CISC architecture today is x86. The x86 architecture is a subset of the PDP-
+
+Response:
+There is a general historical trend.
+In the olden days, memories were small, and so programs were perforce small. Also, compilers were not very smart, and many programs were written in assembler, so it was considered a good thing to be able to write a program using few instructions. Instruction pipelines were simple, and processors grabbed one instruction at a time to execute it. The machinery inside the processor was quite complex anyway; decoding instructions was not felt to be much of a burden. 
+In the 1970s, CPU and compiler designers realized that having such complex instructions was not so helpful after all. It was difficult to design processors in which those instructions were really efficient, and it was difficult to design compilers that really took advantage of these instructions. Chip area and compiler complexity was better spent on more generic pursuits such as more general-purpose registers. The Wikipedia article on RISC explains this in more detail.
+MIPS is the ultimate RISC architecture, which is why it's taught so often.
+The x86 family is a bit different. It was originally a CISC architecture meant for systems with very small memory (no room for large instructions), and has undergone many successive versions. Today's x86 instruction set is not only complicated because it's CISC, but because it's really a 8088 with a 80386 with a Pentium possibly with an x86_64 processor.
+In today's world, RISC and CISC are no longer the black-and-white distinction they might have been once. Most CPU architectures have evolved to different shades of grey.
+On the RISC side, some modern MIPS variants have added multiplication and division instructions, with a non-uniform encoding. ARM processors have become more complex: many of them have a 16-bit instruction set called Thumb in addition to the “original” 32-bit instructions, not to mention Jazelle to execute JVM instructions on the CPU. Modern ARM processors also have SIMD instructions for multimedia applications: some complex instructions do pay after all.
+On the CISC side, all recent processors are to some extent RISC inside. They have microcode to define all these complex macro instructions. The sheer complexity of the processor makes the design of each model take several years, even with a RISC design, what with the large number of components, with pipelining and predictive execution and whatnot.
+So why do the fastest processors remain CISC outside? Part of it, in the case of the x86 (32-bit and 64-bit) family, is historical compatibility. But that's not the whole of it. In the early 2000s, Intel tried pushing the Itanium architecture. Itanium is an extreme case of complex instructions (not really CISC, though: its design has been dubbed EPIC). It even does away with the old-fashioned idea of executing instructions in sequence: all instructions are executed in parallel until the next barrier. One of the reasons Itanium didn't take is that nobody, whether at Intel or elsewhere, could write a decent compiler for it. Now a good old mostly-sequential processor like x86_64, that's something we understand.
+
+========================================
+
+Entry 3
+========================================
+Original Instruction:
+View tabular file such as CSV from command line, having horizontal and vertical scrolling would be great.
+
+Generated Instruction:
+1. Download and install csvkit (https://github.com/pydata/csvkit)
+2. Run the following command to import the csvkit module and define the csvreader object:
+
+```
+import csv
+from csvkit.csvreader import CsvReader
+```
+
+3. Use the csvreader object to read the csv file and extract the ten most populated cities in Germany from the free Maxmind World Cities database.
+
+```
+reader = CsvReader('my_csv_file.csv')
+rows = reader.read()
+
+line_numbers = []
+country_names = []
+city_names = []
+populations = []
+
+for row in rows:
+    line_numbers.append(row.line_number)
+    country_names.append(row.Country)
+    city_names.append(row.AccentCity)
+    populations.append(row.Population)
+
+# Print the top ten most populated cities in Germany
+top_ten_cities = []
+
+for line_number in line_numbers:
+    if line_number not in country_names:
+        top_ten_cities.append(line_number)
+        break
+
+print("Top 10 Most Populous Cities in Germany:")
+for top_ten_city in top_ten_cities:
+    print(top_ten_city)
+```
+
+Response: Can you give me an example of a csvkit output?
+
+Response:
+Sure, please take a look at csvkit. It provides a set of tools that adhere to the UNIX philosophy (meaning they are small, simple, single-purposed and can be combined). 
+
+Here is an example that extracts the ten most populated cities in Germany from the free Maxmind World Cities database and displays the result in a console-readable format:
+```$ csvgrep -e iso-8859-1 -c 1 -m "de" worldcitiespop | csvgrep -c 5 -r "\d+"
+  | csvsort -r -c 5 -l | csvcut -c 1,2,4,6 | head -n 11 | csvlook
+-----------------------------------------------------
+|  line_number | Country | AccentCity | Population  |
+-----------------------------------------------------
+|  1           | de      | Berlin     | 3398362     |
+|  2           | de      | Hamburg    | 1733846     |
+|  3           | de      | Munich     | 1246133     |
+|  4           | de      | Cologne    | 968823      |
+|  5           | de      | Frankfurt  | 648034      |
+|  6           | de      | Dortmund   | 594255      |
+|  7           | de      | Stuttgart  | 591688      |
+|  8           | de      | Düsseldorf | 577139      |
+|  9           | de      | Essen      | 576914      |
+|  10          | de      | Bremen     | 546429      |
+-----------------------------------------------------
+```
+
+Csvkit is platform independent because it is written in Python. 
+
+========================================
+
+Entry 4
+========================================
+Original Instruction:
+Slater type orbitals (STO) are considered to be more accurate than gaussian type orbitals (GTO) for atomic and molecular QM calculations because - among other reasons - they decay with $e^{-\alpha r}$ as $r \to \infty$. But GTOs are more popular because they are easier to calculate with. GTOs decay with $e^{-\alpha r^2}$, so its adequate to sometimes add diffuse functions to the GTO basis set to compensate for gaussian decay behaviour.
+Also, exact hydrogen wavefunctions decay exponentially, so the motivation for STOs.
+I understand that the only boundary requirement for solving the Schrödinger equation for atoms and molecules in free space is that the wavefunction goes zero as $r \to \infty$, but there are no a priori requirements for the way it decays as it does so.
+My question is: do we have theoretical (ab initio) and/or experimental reasons to believe that all atomic and molecular wavefunctions decay like $e^{-\alpha r}$ as $r \to \infty$.
+
+Generated Instruction:
+The exponential behavior is due to the fact that the Schrödinger equation for the one-electron system has a positive energy solution for the Schrödinger equation for a two-electron system.
+
+Response: Explain why the exponential behavior follows from the Schrodinger equation, and prove it.
+
+
+A: I'll provide the theoretical answer from the theoretical side, and then you can answer the question from the practical side.
+The exponential behavior follows from the Schrödinger equation for the one-electron system, which has a positive energy solution.
+To see this, let's work in the Kohn-Sham framework, where we replace the exact one-electron wavefunction by the Kohn-Sham one, which is an approximation that is good enough for our purposes.
+The Kohn-Sham wavefunction decays like
+$$
+\psi(\mathbf{r}) = Ce^{-\sqrt{2\epsilon}\mathbf{k}\cdot\mathbf{r}}
+$$
+for some unit vector $\mathbf{k
+
+Response:
+I'll answer this question from the theoretical side. The exponential behavior follows simply from the Schrödinger equation. Consider the one-electron Schrödinger equation:
+$$
+(-\frac{1}{2}\nabla^2 + V(\mathbf{r}))\psi(\mathbf{r}) = \epsilon\psi(\mathbf{r}), \epsilon < 0
+$$
+At spatial points that are very far away from the nucleus, $V(\mathbf{r})\approx 0$, so that the asymptotic solution is given by
+$$
+-\frac{1}{2}\nabla^2\psi(\mathbf{r}) = \epsilon\psi(\mathbf{r}), \epsilon < 0
+$$
+This differential equation has basic solutions of the form
+$$
+\psi(\mathbf{r}) = Ce^{-\sqrt{-2\epsilon}\mathbf{k}\cdot\mathbf{r}}
+$$
+for some unit vector $\mathbf{k}$. The real asymptotic behavior of $\psi(\mathbf{r})$ is thus a linear combination of these basic solutions. The linear combination may bring a polynomial prefactor to the exponential, but will never alter the exponent. Thus we have not only proved the exponential behavior, but also derived the correct exponent $\alpha = \sqrt{-2\epsilon}$. For a multi-electronic, non-interacting system, the overall decay rate is governed by the slowest decaying orbital, i.e. the HOMO.
+Of course, the real wavefunction can only be described by a multi-electron Schrödinger equation. But we can work on the equivalent Kohn-Sham system and show that the Kohn-Sham wavefunction decays at a rate given by the Kohn-Sham HOMO energy. By Janak's theorem, the Kohn-Sham HOMO energy is just the negative of the ionization potential of the exact system. To see this, consider a huge ensemble of $N$ identical, non-interacting molecules. If we remove one electron from the ensemble and let the hole delocalize evenly between all the molecules, then as $N\to +\infty$, the electron removal has a negligible impact on the electron density of any molecule (and therefore the Kohn-Sham potential of each molecule). Therefore under the Kohn-Sham framework we see that removing such an electron costs an energy of $-\epsilon_{\mathrm{HOMO}}$ (it does not matter whether the HOMO refers to that of the ensemble or that of a molecule, since their orbital energies are equal), since the electron is taken from an energy level whose energy is $\epsilon_{\mathrm{HOMO}}$ and the Hamiltonian is not changed in this process. On the other hand, from the perspective of the real system it is clear that the energy cost is equal to the first ionization energy of one of the molecules, $I$. Therefore we have $\epsilon_{\mathrm{HOMO}} = -I$, which means that the Kohn-Sham wavefunction decays like (again up to a possible polynomial prefactor; the precise determination of this polynomial prefactor is a much more difficult question)
+$$
+\psi(\mathbf{r}) = Ce^{-\sqrt{2I}\mathbf{k}\cdot\mathbf{r}}
+$$
+Although the Kohn-Sham wavefunction is fictional, its density is equal to the true multielectronic density, and in order for the true density to have the same asymptotic behavior as the Kohn-Sham density, the true wavefunction must have the same asymptotic behavior as the Kohn-Sham wavefunction. Q.E.D.
+
+========================================
+
+Entry 5
+========================================
+Original Instruction:
+Explain what "git reset" does. I come from a SVN background and Git is a whole new paradigm. I got mercurial easily, but Git is much more technical.
+I think ```git reset``` is close to ```hg revert```, but it seems there are differences. Please include detailed explanations about:
+
+* the options ```--hard```, ```--soft``` and ```--merge```;
+* the strange notation you use with ```HEAD``` such as ```HEAD^``` and ```HEAD~1```;
+* concrete use cases and work flows;
+* consequences on the working copy, the ```HEAD``` and your global stress level.
+
+Generated Instruction:
+Create a well-commented script which takes a string as input, and outputs the string with two spaces between each character.
+
+```
+#!/bin/bash
+
+string="$1"
+new_string=$(echo "$string" | sed "s/ //g")
+echo "$new_string"
+```
+
+Response: Please provide detailed explanations about:
+  ```--hard``` and ```--soft``` and ```--merge```
+
+
+>  Use cases and workflows
+
+
+* Use ```--soft``` when you want to move to another commit and patch things up without "losing your place". It's pretty rare that you need this.
+
+```
+# git reset --soft example
+touch foo                            // Add a file, make some changes.
+git add foo                          //
+git commit -m "bad commit message"   // Commit... D'oh, that was a mistake!
+git reset --soft HEAD^               // Go back one commit and fix things.
+git commit -m "good commit"          // There, now it's right.
+```
+--
+
+* Use ```--mixed``` (which is the default) when you want to see what things look like at another commit, but you don't want to lose any changes you already have.
+
+```
+# git reset --mixed example
+touch foo                            // Add a file, make some changes.
+git add foo                          //
+git commit -m "bad commit message"   // Commit... D'oh, that was a mistake!
+git reset --mixed HEAD^               // Go back one commit and fix things.
+git commit -m "good commit"          // There, now it's right.
+```
+--
+
+* Use ```--hard``` to wipe everything out and start a fresh slate at the new commit.
+
+```
+# git reset --hard example
+touch foo                            // Add a file, make some changes.
+git add foo                          //
+git commit -m "bad commit message"   // Commit... D'oh, that was a mistake!
+git reset --hard HEAD^               // Go back one commit and fix things.
+git commit -m "good commit"          // There, now it's right.
+```
+
+
+>  Please include detailed explanations about:
+  ```--hard``` and ```--soft``` and ```--merge```
+
+
+>  concrete use cases and workflows;
+
+
+* Use ```--soft``` when you want to move to another
+
+Response:
+Remember that in ```git``` you have:
+
+* the ```HEAD``` pointer, which tells you what commit you're working on
+* the working tree, which represents the state of the files on your system
+* the staging area (also called the index), which "stages" changes so that they can later be committed together
+
+
+>  Please include detailed explanations about:
+  ```--hard```, ```--soft``` and ```--merge```;
+
+In increasing order of dangerous-ness:
+
+* ```--soft``` moves ```HEAD``` but doesn't touch the staging area or the working tree.
+* ```--mixed``` moves ```HEAD``` and updates the staging area, but not the working tree.
+* ```--merge``` moves ```HEAD```, resets the staging area, and tries to move all the changes in your working tree into the new working tree.
+* ```--hard``` moves ```HEAD``` and adjusts your staging area and working tree to the new ```HEAD```, throwing away everything.
+
+
+>  concrete use cases and workflows;
+
+
+* Use ```--soft``` when you want to move to another commit and patch things up without "losing your place". It's pretty rare that you need this.
+
+```
+# git reset --soft example
+touch foo                            // Add a file, make some changes.
+git add foo                          //
+git commit -m "bad commit message"   // Commit... D'oh, that was a mistake!
+git reset --soft HEAD^               // Go back one commit and fix things.
+git commit -m "good commit"          // There, now it's right.
+```
+--
+
+* Use ```--mixed``` (which is the default) when you want to see what things look like at another commit, but you don't want to lose any changes you already have.
+* Use ```--merge``` when you want to move to a new spot but incorporate the changes you already have into that the working tree.
+* Use ```--hard``` to wipe everything out and start a fresh slate at the new commit.
+
+========================================
+
+Entry 6
+========================================
+Original Instruction:
+I am looking to use Java to get the MD5 checksum of a file.
+How is it done?
+
+Generated Instruction:
+* A unified user-friendly API for all hash functions: com.google.common.hash
+* Seedable 32- and 128-bit implementations of murmur3, and md5, sha1, sha256, sha512 adapters, change only one line of code to switch between these, and murmur.
+* goodFastHash(int bits), for when you don't care what algorithm you use
+
+* General utilities for HashCode instances, like combineOrdered / combineUnordered
+
+Response: What part of Files.hash as stated above does not cover Files.hash ?
+
+Input:
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* Files.hash
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+* "What part of Files.hash as stated above does not cover Files.hash ?"
+
+*
+
+Response:
+The com.google.common.hash API offers:
+
+* A unified user-friendly API for all hash functions
+* Seedable 32- and 128-bit implementations of murmur3
+* md5(), sha1(), sha256(), sha512() adapters, change only one line of code to switch between these, and murmur.
+* goodFastHash(int bits), for when you don't care what algorithm you use
+* General utilities for HashCode instances, like combineOrdered / combineUnordered
+
+Read the User Guide (IO Explained, Hashing Explained). 
+For your use-case ```Files.hash()``` computes and returns the digest value for a file.
+For example a sha-1 digest calculation (change SHA-1 to MD5 to get MD5 digest)
+```HashCode hc = Files.asByteSource(file).hash(Hashing.sha1());
+"SHA-1: " + hc.toString();
+```
+Note that crc32 is much faster than md5, so use crc32 if you do not need a cryptographically secure checksum. Note also that md5 should not be used to store passwords and the like since it is to easy to brute force, for passwords use bcrypt,  scrypt or sha-256 instead. 
+For long term protection with hashes a  Merkle signature scheme adds to the security and The Post Quantum Cryptography Study Group sponsored by the European Commission has recommended use of this cryptography for long term protection against quantum computers (ref).
+Note that crc32 has a higher collision rate than the others. 
+What part of Files.hash as stated above does not cover Files.hash ?
+
+========================================
+
+Entry 7
+========================================
+Original Instruction:
+What are the primary objections Democrats have to a border wall?
+
+Generated Instruction:
+The Democrats are not opposed to border wall construction, but they are opposed to some of the plans for full-border walls that have been put forth so far.
+
+Response: The Democrats are opposed to full border walls, but they are opposed to some of the plans for full-border walls that have been put forth so far.
+
+Is this what you mean by Democrats being opposed to border wall construction?
+
+
+:o
+
+
+:o
+
+
+Response: The Democrats are not opposed to border wall construction, but they are opposed to some of the plans for full-border walls that have been put forth so far.
+
+Is this what you mean by Democrats being opposed to border wall construction?
+
+
+:o
+
+
+:o
+
+
+Response: The Democrats are not opposed to border wall construction, but they are opposed to some of the plans for full-border walls that have been put forth so far.
+
+Is this what you mean by Democrats being opposed to border wall construction?
+
+
+:o
+
+
+:o
+
+
+Response: The Democrats are not opposed to border wall construction, but they are opposed to some of the plans for full-border walls that have been put forth so far.
+
+Is this what you mean by Democrats being opposed to border wall construction?
+
+
+:o
+
+
+:o
+
+
+Response: The Democrats are not opposed to border wall construction, but they are opposed to some of the plans for full-border walls that have been put forth so far.
+
+Is this what you mean by Democrats being opposed to border wall construction?
+
+
+:o
+
+
+:o
+
+
+Response: The Democrats are not opposed to border wall construction, but they are opposed to some of the plans for full-border walls that have been put forth so far.
+
+Is this what you mean by Democrats being opposed to border wall construction?
+
+
+:o
+
+
+:o
+
+
+Response: The Democrats are not opposed to border wall construction, but they are opposed to some of the plans for full-border walls that have been put forth so far.
+
+Is this what you mean by Democrats being opposed to border wall construction?
+
+
+:o
+
+
+:o
+
+
+Response: The Democrats are not opposed to border wall construction, but they are opposed to some of the plans for full-border walls that have been
+
+Response:
+It's not clear to me that Democrats are opposed to border-wall construction (your one source suggests they are fine with border walls/fences where necessary), so much as they opposed to some of the plans for full-border walls that have been put forth so far.
+Recently, in response to reports that the spending bill would include funding for a border wall, 5 Democratic senators released a letter voicing concerns over the cost, the effectiveness, and the legal issues of constructing it.
+
+We are also concerned with reports that there may be an effort to include funding for a very expensive new wall along the southern border with Mexico and a “deportation force.”  According to non-partisan experts, the proposed new border wall could cost as much as $25 million per mile and raises considerable issues that have not been resolved by the Congress or the Department of Homeland Security.  First, many experts believe that such a border wall will not work.  Second, there is real concern that the Administration, put simply, has no plan to build the border wall.  For example, the Administration has not detailed how to 1) use eminent domain and other procedures to acquire land from private landowners and Native American tribes, 2) design the wall, 3) locate the wall, 4) construct the wall, and 5) require Mexico to pay for the wall given the President’s clear and repeated promises that he would force Mexico to do so. Finally, there are objections to the construction of a wall from Democratic and Republican members of Congress that represent border states.  Given these and other concerns, we believe it would be inappropriate to insist on the inclusion of such funding in a must-pass appropriations bill that is needed for the Republican majority in control of the Congress to avert a government shutdown so early in President Trump’s Administration.
+[...]
+Senator Charles Schumer
+Senator Richard Durbin
+Senator Patty Murray
+Senator Debbie Stabenow
+Senator Patrick Leahy
+
+Based on this letter, it appears their main objections to a full border wall are currently the cost-benefit ratio and the legal issues of taking land from Americans to build it on; objections that may not be unique to Democrats.
+
+========================================
+
+Entry 8
+========================================
+Original Instruction:
+I'm converting a video to GIF file with ```ffmpeg```:
+```ffmpeg \
+  -i input.flv \
+  -ss 00:00:00.000 \
+  -pix_fmt rgb24 \
+  -r 10 \
+  -s 320x240 \
+  -t 00:00:10.000 \
+  output.gif
+```
+It works great, but output gif file has a very low quality.
+Any ideas how can I improve quality of converted gif?
+
+Generated Instruction:
+1. If you want to avoid intermediate image files, the commands provided by LordNeckBeard can be piped between ffmpeg and ImageMagick's convert.
+2. ```ffmpeg -i input.flv -vf scale=320:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 10 -loop 0 - output.gif``` is the command you want to use.
+3. To optimize the result without saving a file, you can pipe the output from ```convert``` to a second ```convert``` command:
+```ffmpeg -i input.flv -vf scale=320:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 10 -loop 0 - gif:- | convert -layers Optimize - output.gif```
+4. The second ```convert``` command is the same as the first but with the option ```-layers Optimize```.
+5. Note that this method may not always provide a smaller file size, so you may want to try converting to a gif without optimization first to be sure.
+
+Response: I would like to convert a flv video to an animated gif.
+
+How can I optimize the result without saving a file?
+
+How can I optimize the result without saving a file?
+
+Please provide the commands you used.
+
+Response:
+If you would prefer to avoid intermediate image files, the commands provided by LordNeckBeard can be piped between ```ffmpeg``` and ImageMagick's ```convert``` so that no intermediate files are required:
+```ffmpeg -i input.flv -vf scale=320:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 10 -loop 0 - output.gif
+```
+The ```-f image2pipe``` tells ffmpeg to split the video into images and make it suitable to be piped out, and ```-vcodec ppm``` specifies the output format to be ppm (for some reason if the format is png, either ```convert``` does not read all the images from the pipe, or ffmpeg does not output them all). The ```-``` for both commands specifies that a pipe will be used for output and input respectively.
+To optimize the result without saving a file, you can pipe the output from ```convert``` to a second ```convert``` command:
+```ffmpeg -i input.flv -vf scale=320:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 10 -loop 0 - gif:- | convert -layers Optimize - output.gif
+```
+The ```gif:-``` tells ```convert``` to pipe its output as gif formatted data and ```-layers Optimize``` tells the second ```convert``` to perform ```optimize-frame``` and ```optimize-transparancy``` methods (see the ImageMagick Introduction to Animation Optimization). Note that the output from the ```-layers Optimize``` may not always provide a smaller file size, so you may want to try converting to a gif without optimization first to be sure.
+Remember that during this whole process everything is in memory so you may need sufficient memory if the images are quite large.
+
+========================================
+
+Entry 9
+========================================
+Original Instruction:
+Tor can only handle TCP connections, but DNS is a UDP protocol. How does Tor route DNS requests over its TCP based network? Why can the same approach not be used to route all UDP traffic over Tor?
+
+Generated Instruction:
+As far as I know, there is no direct DNS request that tor clients do. The tor client has to create a circuit and then use a relay node to send a query to the exit node. Once the connection is established, the exit node will send a response back to the client.
+The tor client does not do any direct DNS requests.
+
+Response: How does tor clients do DNS requests?
+
+
+A: 
+Tor Protocol Specification references
+
+* 6.2. Opening streams and transferring data
+* 6.4. Remote hostname lookup
+* Proposal 219 - Support for full DNS and DNSSEC resolution in Tor
+
+
+Instruction: As far as I know, there is no direct DNS request that tor clients do. The tor client has to create a circuit and then use a relay node to send a query to the exit node. Once the connection is established, the exit node will send a response back to the client.
+The tor client does not do any direct DNS requests.
+
+A: 
+Tor Protocol Specification references
+
+* 6.2. Opening streams and transferring data
+* 6.4. Remote hostname lookup
+* Proposal 219 - Support for full DNS and DNSSEC resolution in Tor
+
+
+Instruction: No, there is no direct DNS request that tor clients do. The tor client has to create a circuit and then use a relay node to send a query to the exit node. Once the connection is established, the exit node will send a response back to the client.
+
+Response: How does tor clients do DNS requests?
+
+
+A: 
+Tor Protocol Specification references
+
+* 6.2. Opening streams and transferring data
+* 6.4. Remote hostname lookup
+* Proposal 219 - Support for full DNS and DNSSEC resolution in Tor
+
+
+Instruction: As far as I know, there is no direct DNS request that tor clients do. The tor client has to create a circuit and then use a relay node to send a query to the exit node. Once the connection is established, the exit node will send a response back to the client.
+
+A: 
+Tor Protocol Specification references
+
+* 6.2. Opening streams and transferring data
+* 6.4. Remote hostname lookup
+* Proposal 219 - Support for full DNS and DNSSEC resolution in Tor
+
+
+Instruction: No, there is no direct DNS request that tor clients do. The tor client has to create a circuit and then use a relay node to send a query to the exit node. Once the connection is established, the exit node will send a response back to the client.
+
+Response: How does tor clients do DNS requests?
+
+
+A: 
+Tor Protocol Specification references
+
+* 6.2. Opening streams and transferring data
+* 6.4. Remote hostname lookup
+* Proposal 219 - Support for full DNS and DNSSEC resolution in Tor
+
+
+Instruction: As far as I know, there is no direct DNS request that tor clients do. The tor client has to create a circuit and then
+
+Response:
+Tor clients do not, in general, directly do DNS requests.  When you open a connection through the tor network you usually ask your client (on its socks ports) to connect you to a hostname and port, say www.example.com:80.
+Your tor client, once it has created a circuit, will send that hostname and port to the exit node in its RELAY_BEGIN cell.
+The exit node will then do a DNS resolve and open a TCP connection to the target.  Once that's established it will tell your client that the connection is open, and for informational purposes will also tell your client what address that hostname resolved to.
+Tor, in addition to that, has some sort of "remote DNS resolve" protocol built in.  This support allows clients to query for certain resource types, like IPv4 or IPv6 addresses.  Here too, the exit node does the actual DNS packet sending and receiving and just relays the answer to the client.
+No UDP packets are actually ever routed from the client.
+There's also a proposal to add more full featured DNS support to Tor.  So far it hasn't been implemented.
+
+Tor Protocol Specification references
+
+* 6.2. Opening streams and transferring data
+* 6.4. Remote hostname lookup
+* Proposal 219 - Support for full DNS and DNSSEC resolution in Tor
+
+
+========================================
+
+Entry 10
+========================================
+Original Instruction:
+Why does this throw ```NullPointerException```
+```public static void main(String[] args) throws Exception {
+    Boolean b = true ? returnsNull() : false; // NPE on this line.
+    System.out.println(b);
+}
+public static Boolean returnsNull() {
+    return null;
+}
+```
+while this doesn't
+```public static void main(String[] args) throws Exception {
+    Boolean b = true ? null : false;
+    System.out.println(b); // null
+}
+```
+?
+The solution is by the way to replace ```false``` by ```Boolean.FALSE``` to avoid ```null``` being unboxed to ```boolean``` --which isn't possible. But that isn't the question. The question is why? Are there any references in JLS which confirms this behaviour, especially of the 2nd case?
+
+Generated Instruction:
+The difference is that the explicit type of the ```returnsNull()``` method affects the static typing of the expressions at compile time:
+```E1: `true ? returnsNull() : false` - boolean (auto-unboxing 2nd operand to boolean)
+E2: `true ? null : false` - Boolean (autoboxing of 3rd operand to Boolean)
+```
+See Java Language Specification, section 15.25 Conditional Operator ? :
+
+* For E1, the types of the 2nd and 3rd operands are ```Boolean``` and ```boolean``` respectively, so this clause applies:
+
+  If one of the second and third operands is of type boolean and the type of the other is of type Boolean, then the type of the conditional expression is boolean.
+
+Since the type of the expression is ```boolean```, the 2nd operand must be coerced to ```boolean```.  The compiler inserts auto-unboxing code to the 2nd operand (return value of ```returnsNull()```) to make it type ```boolean```.  This of course causes the NPE from the ```null``` returned at run-time.
+* For E2, the types of the 2nd and 3rd operands are `````` (not ```Boolean``` as in E1!) and ```boolean``` respectively, so no specific typing clause applies (go read 'em!), so the final "otherwise" clause applies:
+
+  Otherwise, the second and third operands are of types S1 and S2 respectively. Let T1 be the type that results from applying boxing conversion to S1, and let T2 be the type that results from applying boxing conversion to S2. The type of the conditional expression is the result of applying capture conversion (§5.1.10) to
+
+Response:
+The difference is that the explicit type of the ```returnsNull()``` method affects the static typing of the expressions at compile time:
+```E1: `true ? returnsNull() : false` - boolean (auto-unboxing 2nd operand to boolean)
+E2: `true ? null : false` - Boolean (autoboxing of 3rd operand to Boolean)
+```
+See Java Language Specification, section 15.25 Conditional Operator ? :
+
+* For E1, the types of the 2nd and 3rd operands are ```Boolean``` and ```boolean``` respectively, so this clause applies:
+
+  If one of the second and third operands is of type boolean and the type of the other is of type Boolean, then the type of the conditional expression is boolean.
+
+Since the type of the expression is ```boolean```, the 2nd operand must be coerced to ```boolean```.  The compiler inserts auto-unboxing code to the 2nd operand (return value of ```returnsNull()```) to make it type ```boolean```.  This of course causes the NPE from the ```null``` returned at run-time.
+* For E2, types of the 2nd and 3rd operands are `````` (not ```Boolean``` as in E1!) and ```boolean``` respectively, so no specific typing clause applies (go read 'em!), so the final "otherwise" clause applies:
+
+  Otherwise, the second and third operands are of types S1 and S2 respectively. Let T1 be the type that results from applying boxing conversion to S1, and let T2 be the type that results from applying boxing conversion to S2. The type of the conditional expression is the result of applying capture conversion (§5.1.10) to lub(T1, T2) (§15.12.2.7).
+
+
+* S1 == `````` (see §4.1)
+* S2 == ```boolean```
+* T1 == box(S1) == `````` (see last item in list of boxing conversions in  §5.1.7)
+* T2 == box(S2) == `Boolean
+* lub(T1, T2) == ```Boolean```
+
+So the type of the conditional expression is ```Boolean``` and the 3rd operand must be coerced to ```Boolean```.  The compiler inserts auto-boxing code for the 3rd operand (```false```).  The 2nd operand doesn't need the auto-unboxing as in ```E1```, so no auto-unboxing NPE when ```null``` is returned.
+
+
+This question needs a similar type analysis:
+Java conditional operator ?: result type
+
+========================================
+

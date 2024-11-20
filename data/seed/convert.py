@@ -53,6 +53,14 @@ def load_tree_data(
 if __name__ == "__main__":
     dump_num = 3200
     pairs = load_tree_data("dataset/seed/2023-04-12_oasst_ready.trees.jsonl")
+
+    max_length = 1024
+    nums = 0
+    for ins in pairs:
+        if len(ins["instruction"]) < max_length and len(ins["response"]) < max_length:
+            nums += 1
+    print(nums)
+
     print(f"#data: {len(pairs)}, #dump: {dump_num}")
     pairs.sort(
         key=lambda ins: ins["instruction_quality"] + ins["response_quality"],
